@@ -1,4 +1,30 @@
 {
+  "name": "server",
+  "version": "1.0.0",
+  "description": "node project utilizing Typegraphl to fetch data",
+  "keywords": [
+    "typegraphql",
+    "typeorm",
+    "typescript",
+    "node",
+    "apollo",
+    "database"
+  ],
+  "homepage": "https://github.com/jadogeri/typegraphql-tutorial#readme",
+  "bugs": {
+    "url": "https://github.com/jadogeri/typegraphql-tutorial/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/typegraphql-tutorial.git"
+  },
+  "license": "MIT",
+  "author": "Joseph Adogeri",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "reflect-metadata": "^0.2.2",
     "sqlite3": "^5.1.7",
