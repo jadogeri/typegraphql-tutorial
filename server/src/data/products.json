@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "category_id": 2,
+      "category_id": 21,
       "name": "Neural-Link VR Glasses",
       "price": 899.99,
       "currency": "USD",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "category_id": 3,
+      "category_id": 62,
       "name": "Aura X Smartwatch",
       "price": 249.00,
       "currency": "USD",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "category_id": 4,
+      "category_id": 81,
       "name": "Nano-Weave Jacket",
       "price": 199.99,
       "currency": "USD",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "category_id": 5,
+      "category_id": 41,
       "name": "Eco-Hydro Grow Kit",
       "price": 145.00,
       "currency": "USD",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "category_id": 2,
+      "category_id": 23,
       "name": "Haptic Feedback Gloves",
       "price": 350.75,
       "currency": "USD",
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "category_id": 1,
+      "category_id": 5,
       "name": "Nebula 8K OLED Monitor",
       "price": 1200.00,
       "currency": "USD",
@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "category_id": 3,
+      "category_id": 61,
       "name": "Chrono-Scan Health Band",
       "price": 89.99,
       "currency": "USD",
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "category_id": 4,
+      "category_id": 87,
       "name": "Solar-Charge Backpack",
       "price": 110.25,
       "currency": "USD",
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "category_id": 5,
+      "category_id": 42,
       "name": "Zero-G Lounge Chair",
       "price": 499.00,
       "currency": "USD",
@@ -82,7 +82,7 @@
     },
     {
       "id": 11,
-      "category_id": 2,
+      "category_id": 88,
       "name": "Aero-Glide Hoverboard",
       "price": 1500.00,
       "currency": "USD",
@@ -90,7 +90,7 @@
     },
     {
       "id": 12,
-      "category_id": 1,
+      "category_id": 16,
       "name": "Cryo-Cooled Graphics Card",
       "price": 750.00,
       "currency": "USD",
@@ -98,7 +98,7 @@
     },
     {
       "id": 13,
-      "category_id": 3,
+      "category_id": 44,
       "name": "Bio-Metric Door Lock",
       "price": 320.00,
       "currency": "USD",
@@ -106,7 +106,7 @@
     },
     {
       "id": 14,
-      "category_id": 4,
+      "category_id": 83,
       "name": "Self-Healing Tire Patch",
       "price": 25.50,
       "currency": "USD",
@@ -114,7 +114,7 @@
     },
     {
       "id": 15,
-      "category_id": 5,
+      "category_id": 42,
       "name": "Modular Sofa System",
       "price": 899.99,
       "currency": "USD",
@@ -122,7 +122,7 @@
     },
     {
       "id": 16,
-      "category_id": 2,
+      "category_id": 36,
       "name": "Telepathy Trainer Headset",
       "price": 2100.00,
       "currency": "USD",
@@ -130,7 +130,7 @@
     },
     {
       "id": 17,
-      "category_id": 1,
+      "category_id": 14,
       "name": "Holo-Projector Keyboard",
       "price": 150.00,
       "currency": "USD",
@@ -138,7 +138,7 @@
     },
     {
       "id": 18,
-      "category_id": 3,
+      "category_id": 48,
       "name": "Voice-Activated Coffee Brewer",
       "price": 199.00,
       "currency": "USD",
@@ -146,7 +146,7 @@
     },
     {
       "id": 19,
-      "category_id": 4,
+      "category_id": 81,
       "name": "Invisi-Cape Raincoat",
       "price": 50.00,
       "currency": "USD",
@@ -154,7 +154,7 @@
     },
     {
       "id": 20,
-      "category_id": 5,
+      "category_id": 54,
       "name": "Smart-Dust Air Purifier",
       "price": 349.99,
       "currency": "USD",
@@ -162,7 +162,7 @@
     },
     {
       "id": 21,
-      "category_id": 2,
+      "category_id": 38,
       "name": "Drone Butler 3000",
       "price": 450.00,
       "currency": "USD",
@@ -170,7 +170,7 @@
     },
     {
       "id": 22,
-      "category_id": 1,
+      "category_id": 11,
       "name": "Solid-State Battery Pack",
       "price": 75.00,
       "currency": "USD",
@@ -178,7 +178,7 @@
     },
     {
       "id": 23,
-      "category_id": 3,
+      "category_id": 46,
       "name": "AI Home Assistant Sphere",
       "price": 299.00,
       "currency": "USD",
@@ -186,7 +186,7 @@
     },
     {
       "id": 24,
-      "category_id": 4,
+      "category_id": 86,
       "name": "Kinetic Energy Shoes",
       "price": 150.00,
       "currency": "USD",
@@ -194,7 +194,7 @@
     },
     {
       "id": 25,
-      "category_id": 5,
+      "category_id": 41,
       "name": "Automated Vertical Garden",
       "price": 600.00,
       "currency": "USD",
@@ -202,7 +202,7 @@
     },
     {
       "id": 26,
-      "category_id": 2,
+      "category_id": 88,
       "name": "Sub-Aqua Scooter",
       "price": 999.00,
       "currency": "USD",
@@ -210,7 +210,7 @@
     },
     {
       "id": 27,
-      "category_id": 1,
+      "category_id": 5,
       "name": "Flexible OLED Screen Roll",
       "price": 400.00,
       "currency": "USD",
@@ -218,7 +218,7 @@
     },
     {
       "id": 28,
-      "category_id": 3,
+      "category_id": 67,
       "name": "Smart Thermos & Infuser",
       "price": 45.99,
       "currency": "USD",
@@ -226,7 +226,7 @@
     },
     {
       "id": 29,
-      "category_id": 4,
+      "category_id": 96,
       "name": "Adaptive Camo Suit",
       "price": 750.00,
       "currency": "USD",
@@ -234,7 +234,7 @@
     },
     {
       "id": 30,
-      "category_id": 5,
+      "category_id": 42,
       "name": "Gravity-Defying Shelf",
       "price": 220.00,
       "currency": "USD",
@@ -242,7 +242,7 @@
     },
     {
       "id": 31,
-      "category_id": 2,
+      "category_id": 36,
       "name": "Brainwave Sensor Cap",
       "price": 180.00,
       "currency": "USD",
@@ -250,7 +250,7 @@
     },
     {
       "id": 32,
-      "category_id": 1,
+      "category_id": 9,
       "name": "Terabyte Micro-SD Card",
       "price": 89.99,
       "currency": "USD",
@@ -258,7 +258,7 @@
     },
     {
       "id": 33,
-      "category_id": 3,
+      "category_id": 48,
       "name": "AI Personal Chef Unit",
       "price": 1500.00,
       "currency": "USD",
@@ -266,7 +266,7 @@
     },
     {
       "id": 34,
-      "category_id": 4,
+      "category_id": 92,
       "name": "Bio-Reactive Face Mask",
       "price": 15.00,
       "currency": "USD",
@@ -274,7 +274,7 @@
     },
     {
       "id": 35,
-      "category_id": 5,
+      "category_id": 47,
       "name": "Quantum Dot Light System",
       "price": 299.00,
       "currency": "USD",
@@ -282,7 +282,7 @@
     },
     {
       "id": 36,
-      "category_id": 2,
+      "category_id": 88,
       "name": "Personal Flight Pack",
       "price": 10000.00,
       "currency": "USD",
@@ -290,7 +290,7 @@
     },
     {
       "id": 37,
-      "category_id": 1,
+      "category_id": 14,
       "name": "Silent Magnetic Keyboard",
       "price": 99.00,
       "currency": "USD",
@@ -298,7 +298,7 @@
     },
     {
       "id": 38,
-      "category_id": 3,
+      "category_id": 67,
       "name": "Smart-Water Bottle (UV-C)",
       "price": 55.00,
       "currency": "USD",
@@ -306,7 +306,7 @@
     },
     {
       "id": 39,
-      "category_id": 4,
+      "category_id": 86,
       "name": "Temp-Adaptive Underwear",
       "price": 35.00,
       "currency": "USD",
@@ -314,7 +314,7 @@
     },
     {
       "id": 40,
-      "category_id": 5,
+      "category_id": 60,
       "name": "Acoustic Dampening Panel Set",
       "price": 120.00,
       "currency": "USD",
@@ -322,7 +322,7 @@
     },
     {
       "id": 41,
-      "category_id": 2,
+      "category_id": 55,
       "name": "Robot Dog Companion (Aibo V2)",
       "price": 2500.00,
       "currency": "USD",
@@ -330,7 +330,7 @@
     },
     {
       "id": 42,
-      "category_id": 1,
+      "category_id": 9,
       "name": "Quantum Hard Drive (50TB)",
       "price": 600.00,
       "currency": "USD",
@@ -338,7 +338,7 @@
     },
     {
       "id": 43,
-      "category_id": 3,
+      "category_id": 52,
       "name": "Smart Mirror w/ AR Fit Check",
       "price": 799.00,
       "currency": "USD",
@@ -346,7 +346,7 @@
     },
     {
       "id": 44,
-      "category_id": 4,
+      "category_id": 96,
       "name": "Graphene Super-Strength Rope",
       "price": 40.00,
       "currency": "USD",
@@ -354,7 +354,7 @@
     },
     {
       "id": 45,
-      "category_id": 5,
+      "category_id": 55,
       "name": "Self-Cleaning Litter Box",
       "price": 350.00,
       "currency": "USD",
@@ -362,7 +362,7 @@
     },
     {
       "id": 46,
-      "category_id": 2,
+      "category_id": 88,
       "name": "Deep-Sea Personal Submarine",
       "price": 50000.00,
       "currency": "USD",
@@ -378,7 +378,7 @@
     },
     {
       "id": 48,
-      "category_id": 3,
+      "category_id": 55,
       "name": "Automated Pet Feeder & Cam",
       "price": 99.99,
       "currency": "USD",
@@ -386,7 +386,7 @@
     },
     {
       "id": 49,
-      "category_id": 4,
+      "category_id": 96,
       "name": "Anti-Gravity Tent (2 person)",
       "price": 1200.00,
       "currency": "USD",
@@ -394,411 +394,411 @@
     },
     {
       "id": 50,
-      "category_id": 5,
-      "name": "Mood-Sensing Lighting Strips",
-      "price": 89.00,
+      "category_id": 50,
+      "name": "Waste-to-Energy Recycler",
+      "price": 700.00,
+      "currency": "USD",
+      "stock_level": 40
+    },
+    {
+      "id": 51,
+      "category_id": 22,
+      "name": "AR Safety Goggles",
+      "price": 450.00,
+      "currency": "USD",
+      "stock_level": 150
+    },
+    {
+      "id": 52,
+      "category_id": 17,
+      "name": "External Quantum GPU Unit",
+      "price": 2500.00,
+      "currency": "USD",
+      "stock_level": 30
+    },
+    {
+      "id": 53,
+      "category_id": 78,
+      "name": "Smart Knee Brace",
+      "price": 180.00,
+      "currency": "USD",
+      "stock_level": 300
+    },
+    {
+      "id": 54,
+      "category_id": 91,
+      "name": "Foldable Electric Scooter",
+      "price": 550.00,
+      "currency": "USD",
+      "stock_level": 200
+    },
+    {
+      "id": 55,
+      "category_id": 43,
+      "name": "AI Home Climate System",
+      "price": 1200.00,
+      "currency": "USD",
+      "stock_level": 50
+    },
+    {
+      "id": 56,
+      "category_id": 26,
+      "name": "XR Control Ring",
+      "price": 75.00,
+      "currency": "USD",
+      "stock_level": 1500
+    },
+    {
+      "id": 57,
+      "category_id": 1,
+      "name": "NPU AI Accelerator Card",
+      "price": 800.00,
+      "currency": "USD",
+      "stock_level": 100
+    },
+    {
+      "id": 58,
+      "category_id": 74,
+      "name": "Smart Orthotic Inserts",
+      "price": 120.00,
       "currency": "USD",
       "stock_level": 600
     },
     {
-      "id": 51,
-      "category_id": 2,
-      "name": "Fusion Energy Home Battery",
-      "price": 20000.00,
+      "id": 59,
+      "category_id": 89,
+      "name": "Hydrogen Fuel Cell E-Bike",
+      "price": 3500.00,
       "currency": "USD",
-      "stock_level": 8
+      "stock_level": 15
     },
     {
-      "id": 52,
-      "category_id": 1,
-      "name": "Light-Speed USB 7.0 Cable",
-      "price": 29.99,
-      "currency": "USD",
-      "stock_level": 10000
-    },
-    {
-      "id": 53,
-      "category_id": 3,
-      "name": "Holographic Photo Frame",
+      "id": 60,
+      "category_id": 59,
+      "name": "Intelligent Pantry Sensor Kit",
       "price": 150.00,
       "currency": "USD",
       "stock_level": 350
     },
     {
-      "id": 54,
-      "category_id": 4,
-      "name": "Climate-Controlled Sleeping Bag",
+      "id": 61,
+      "category_id": 24,
+      "name": "Spatial Audio Headset",
       "price": 250.00,
       "currency": "USD",
-      "stock_level": 110
-    },
-    {
-      "id": 55,
-      "category_id": 5,
-      "name": "Automated Sushi Maker",
-      "price": 499.00,
-      "currency": "USD",
-      "stock_level": 75
-    },
-    {
-      "id": 56,
-      "category_id": 2,
-      "name": "Smart Contact Lenses w/ AR",
-      "price": 1500.00,
-      "currency": "USD",
-      "stock_level": 90
-    },
-    {
-      "id": 57,
-      "category_id": 1,
-      "name": "Bio-Conductive Mouse Pad",
-      "price": 60.00,
-      "currency": "USD",
-      "stock_level": 500
-    },
-    {
-      "id": 58,
-      "category_id": 3,
-      "name": "UV-C Disinfecting Wand",
-      "price": 89.00,
-      "currency": "USD",
-      "stock_level": 1200
-    },
-    {
-      "id": 59,
-      "category_id": 4,
-      "name": "Foldable Electric Scooter (Carbon Fiber)",
-      "price": 899.00,
-      "currency": "USD",
-      "stock_level": 140
-    },
-    {
-      "id": 60,
-      "category_id": 5,
-      "name": "Vertical Hydroponic Farm Tower",
-      "price": 1100.00,
-      "currency": "USD",
-      "stock_level": 45
-    },
-    {
-      "id": 61,
-      "category_id": 2,
-      "name": "AI Chess Grandmaster Bot",
-      "price": 300.00,
-      "currency": "USD",
-      "stock_level": 210
+      "stock_level": 400
     },
     {
       "id": 62,
-      "category_id": 1,
-      "name": "Voice-Activated Laptop (No Screen)",
-      "price": 699.00,
-      "currency": "USD",
-      "stock_level": 180
-    },
-    {
-      "id": 63,
-      "category_id": 3,
-      "name": "Smart Shower Head w/ Water Monitoring",
-      "price": 199.00,
-      "currency": "USD",
-      "stock_level": 290
-    },
-    {
-      "id": 64,
-      "category_id": 4,
-      "name": "Hovering Drone Umbrella",
-      "price": 450.00,
-      "currency": "USD",
-      "stock_level": 60
-    },
-    {
-      "id": 65,
-      "category_id": 5,
-      "name": "Bio-Fuel Log for Fireplaces",
-      "price": 12.50,
-      "currency": "USD",
-      "stock_level": 3000
-    },
-    {
-      "id": 66 ,
-      "category_id": 2,
-      "name": "Personal Jetpack (Entry Level)",
-      "price": 8000.00,
-      "currency": "USD",
-      "stock_level": 15
-    },
-    {
-      "id": 67,
-      "category_id": 1,
-      "name": "Modular Smartphone (Upgrade V2)",
-      "price": 999.00,
+      "category_id": 13,
+      "name": "Modular Laptop Frame (DIY)",
+      "price": 200.00,
       "currency": "USD",
       "stock_level": 220
     },
     {
-      "id": 68,
-      "category_id": 3,
-      "name": "Sleep-Cycle Optimization Mat",
-      "price": 550.00,
+      "id": 63,
+      "category_id": 63,
+      "name": "Stress-Level Tracking Ring",
+      "price": 299.00,
       "currency": "USD",
-      "stock_level": 100
+      "stock_level": 180
+    },
+    {
+      "id": 64,
+      "category_id": 85,
+      "name": "Carbon-Negative Running Shoes",
+      "price": 180.00,
+      "currency": "USD",
+      "stock_level": 500
+    },
+    {
+      "id": 65,
+      "category_id": 58,
+      "name": "AI Home Security Drone Swarm",
+      "price": 800.00,
+      "currency": "USD",
+      "stock_level": 75
+    },
+    {
+      "id": 66,
+      "category_id": 29,
+      "name": "Virtual Architecture Software License",
+      "price": 1200.00,
+      "currency": "USD",
+      "stock_level": 1000
+    },
+    {
+      "id": 67,
+      "category_id": 8,
+      "name": "Optical RAM Module (1TB)",
+      "price": 400.00,
+      "currency": "USD",
+      "stock_level": 300
+    },
+    {
+      "id": 68,
+      "category_id": 65,
+      "name": "Posture Correction Shirt",
+      "price": 90.00,
+      "currency": "USD",
+      "stock_level": 700
     },
     {
       "id": 69,
-      "category_id": 4,
-      "name": "Kinetic Watch (No Batteries)",
-      "price": 189.00,
+      "category_id": 98,
+      "name": "Regenerative Braking Skateboard",
+      "price": 450.00,
       "currency": "USD",
-      "stock_level": 410
+      "stock_level": 140
     },
     {
       "id": 70,
-      "category_id": 5,
-      "name": "Smart Refrigerator w/ AI Inventory",
-      "price": 2500.00,
+      "category_id": 49,
+      "name": "Sleep-Optimizing Mattress Pad",
+      "price": 1500.00,
       "currency": "USD",
-      "stock_level": 50
+      "stock_level": 60
     },
     {
       "id": 71,
-      "category_id": 2,
-      "name": "VR Treadmill Omnidirectional",
-      "price": 3000.00,
+      "category_id": 31,
+      "name": "Metaverse Asset Creation Suite",
+      "price": 300.00,
       "currency": "USD",
-      "stock_level": 35
+      "stock_level": 2000
     },
     {
       "id": 72,
-      "category_id": 1,
-      "name": "Transparent OLED Laptop",
-      "price": 1800.00,
+      "category_id": 2,
+      "name": "Quantum Computing Development Kit",
+      "price": 5000.00,
       "currency": "USD",
-      "stock_level": 70
+      "stock_level": 10
     },
     {
       "id": 73,
-      "category_id": 3,
-      "name": "Self-Sterilizing Toilet Seat",
-      "price": 400.00,
+      "category_id": 70,
+      "name": "AI-Assisted Hearing Buds",
+      "price": 600.00,
       "currency": "USD",
-      "stock_level": 150
+      "stock_level": 250
     },
     {
       "id": 74,
-      "category_id": 4,
-      "name": "Fireproof/Waterproof Safe Box (Smart)",
-      "price": 500.00,
+      "category_id": 90,
+      "name": "Modular EV Battery Attachment",
+      "price": 1200.00,
       "currency": "USD",
-      "stock_level": 190
+      "stock_level": 40
     },
     {
       "id": 75,
-      "category_id": 5,
-      "name": "Bio-Degradable Nespresso Pods (100 pack)",
-      "price": 45.00,
+      "category_id": 56,
+      "name": "Smart Window Tinting Film",
+      "price": 40.00,
       "currency": "USD",
-      "stock_level": 2500
+      "stock_level": 3000
     },
     {
       "id": 76,
-      "category_id": 2,
-      "name": "AI Tutor Robot",
-      "price": 1200.00,
-      "currency": "USD",
-      "stock_level": 110
-    },
-    {
-      "id": 77,
-      "category_id": 1,
-      "name": "Folding Full-Size Mechanical Keyboard",
-      "price": 160.00,
-      "currency": "USD",
-      "stock_level": 380
-    },
-    {
-      "id": 78,
-      "category_id": 3,
-      "name": "Genetic Health Scanner (Home Use)",
+      "category_id": 32,
+      "name": "Light-Field Home Projector",
       "price": 3500.00,
       "currency": "USD",
       "stock_level": 20
     },
     {
-      "id": 79,
-      "category_id": 4,
-      "name": "Self-Cooling Vest",
-      "price": 199.00,
+      "id": 77,
+      "category_id": 3,
+      "name": "Personal Cryo-Cooling Unit",
+      "price": 1500.00,
       "currency": "USD",
-      "stock_level": 300
+      "stock_level": 70
+    },
+    {
+      "id": 78,
+      "category_id": 75,
+      "name": "Portable Blood Analyzer",
+      "price": 899.00,
+      "currency": "USD",
+      "stock_level": 110
+    },
+    {
+      "id": 79,
+      "category_id": 97,
+      "name": "Smart Tracking Luggage",
+      "price": 300.00,
+      "currency": "USD",
+      "stock_level": 180
     },
     {
       "id": 80,
-      "category_id": 5,
-      "name": "Acoustic Levitation Speaker",
-      "price": 700.00,
-      "currency": "USD",
-      "stock_level": 95
-    },
-    {
-      "id": 81,
-      "category_id": 2,
-      "name": "Nano-Bot Medical Injector",
-      "price": 5000.00,
-      "currency": "USD",
-      "stock_level": 50
-    },
-    {
-      "id": 82,
-      "category_id": 1,
-      "name": "Bio-Organic RAM Module (64GB)",
-      "price": 400.00,
-      "currency": "USD",
-      "stock_level": 600
-    },
-    {
-      "id": 83,
-      "category_id": 3,
-      "name": "Smart Window Glass (Opaque on demand)",
-      "price": 1000.00,
-      "currency": "USD",
-      "stock_level": 120
-    },
-    {
-      "id": 84,
-      "category_id": 4,
-      "name": "Rechargeable Self-Grip Gloves",
-      "price": 75.00,
-      "currency": "USD",
-      "stock_level": 800
-    },
-    {
-      "id": 85,
-      "category_id": 5,
-      "name": "Aura Projector (Mood Lighting)",
-      "price": 130.00,
-      "currency": "USD",
-      "stock_level": 450
-    },
-    {
-      "id": 86,
-      "category_id": 2,
-      "name": "Personal Weather Station Drone",
-      "price": 299.00,
-      "currency": "USD",
-      "stock_level": 170
-    },
-    {
-      "id": 87,
-      "category_id": 1,
-      "name": "Flexible Power Mat (Charges all devices)",
-      "price": 120.00,
-      "currency": "USD",
-      "stock_level": 900
-    },
-    {
-      "id": 88,
-      "category_id": 3,
-      "name": "Smart Garden Sprinkler System (AI)",
-      "price": 250.00,
-      "currency": "USD",
-      "stock_level": 230
-    },
-    {
-      "id": 89,
-      "category_id": 4,
-      "name": "Kinetic Roadway Reflector System",
-      "price": 5.00,
-      "currency": "USD",
-      "stock_level": 10000
-    },
-    {
-      "id": 90,
-      "category_id": 5,
-      "name": "Wall-Mounted Bio-Ethanol Fireplace",
+      "category_id": 57,
+      "name": "High-Yield Solar Glass Panel",
       "price": 600.00,
-      "currency": "USD",
-      "stock_level": 85
-    },
-    {
-      "id": 91,
-      "category_id": 2,
-      "name": "AI Bartender Robot",
-      "price": 3000.00,
-      "currency": "USD",
-      "stock_level": 40
-    },
-    {
-      "id": 92,
-      "category_id": 1,
-      "name": "Transparent Mouse (Haptic Feedback)",
-      "price": 89.00,
-      "currency": "USD",
-      "stock_level": 550
-    },
-    {
-      "id": 93,
-      "category_id": 3,
-      "name": "Smart Toothbrush w/ Plaque Analysis",
-      "price": 120.00,
-      "currency": "USD",
-      "stock_level": 700
-    },
-    {
-      "id": 94,
-      "category_id": 4,
-      "name": "Graphene Infused Hiking Socks (3 pack)",
-      "price": 22.00,
-      "currency": "USD",
-      "stock_level": 1500
-    },
-    {
-      "id": 95,
-      "category_id": 5,
-      "name": "Modular Wall Socket w/ USB-C & Data Port",
-      "price": 35.00,
-      "currency": "USD",
-      "stock_level": 2000
-    },
-    {
-      "id": 96,
-      "category_id": 2,
-      "name": "Personal Sonic Cleaner (Jewelry/Glasses)",
-      "price": 75.00,
-      "currency": "USD",
-      "stock_level": 600
-    },
-    {
-      "id": 97,
-      "category_id": 1,
-      "name": "Quantum Internet Router (1 Tbps)",
-      "price": 1500.00,
       "currency": "USD",
       "stock_level": 90
     },
     {
-      "id": 98,
-      "category_id": 3,
-      "name": "AI Security Camera w/ Facial Rec.",
-      "price": 300.00,
+      "id": 81,
+      "category_id": 25,
+      "name": "360-Degree Volumetric Camera",
+      "price": 2500.00,
+      "currency": "USD",
+      "stock_level": 30
+    },
+    {
+      "id": 82,
+      "category_id": 10,
+      "name": "Bio-Server Rack Module",
+      "price": 10000.00,
+      "currency": "USD",
+      "stock_level": 5
+    },
+    {
+      "id": 83,
+      "category_id": 64,
+      "name": "Smart Contact Lenses (AR Overlay)",
+      "price": 1500.00,
+      "currency": "USD",
+      "stock_level": 60
+    },
+    {
+      "id": 84,
+      "category_id": 82,
+      "name": "Solar-Harvesting Tent Fabric (Roll)",
+      "price": 200.00,
+      "currency": "USD",
+      "stock_level": 400
+    },
+    {
+      "id": 85,
+      "category_id": 45,
+      "name": "Robotic Stair-Climbing Vacuum",
+      "price": 899.00,
+      "currency": "USD",
+      "stock_level": 120
+    },
+    {
+      "id": 86,
+      "category_id": 30,
+      "name": "Digital Twin Sensor Kit",
+      "price": 400.00,
       "currency": "USD",
       "stock_level": 250
     },
     {
-      "id": 99,
-      "category_id": 4,
-      "name": "Heated Gilet (USB Powered)",
-      "price": 110.00,
+      "id": 87,
+      "category_id": 7,
+      "name": "Liquid-Metal CPU Cooler",
+      "price": 150.00,
       "currency": "USD",
-      "stock_level": 320
+      "stock_level": 700
+    },
+    {
+      "id": 88,
+      "category_id": 72,
+      "name": "Smart Sleep-Apnea Mask",
+      "price": 300.00,
+      "currency": "USD",
+      "stock_level": 190
+    },
+    {
+      "id": 89,
+      "category_id": 93,
+      "name": "Biodegradable Tech Tote Bag",
+      "price": 30.00,
+      "currency": "USD",
+      "stock_level": 5000
+    },
+    {
+      "id": 90,
+      "category_id": 51,
+      "name": "Matter Connectivity Hub",
+      "price": 50.00,
+      "currency": "USD",
+      "stock_level": 2000
+    },
+    {
+      "id": 91,
+      "category_id": 33,
+      "name": "Gesture Control Armband",
+      "price": 120.00,
+      "currency": "USD",
+      "stock_level": 800
+    },
+    {
+      "id": 92,
+      "category_id": 4,
+      "name": "NPU Development Board",
+      "price": 700.00,
+      "currency": "USD",
+      "stock_level": 90
+    },
+    {
+      "id": 93,
+      "category_id": 68,
+      "name": "UV-Exposure Sensor Patch (5 Pack)",
+      "price": 25.00,
+      "currency": "USD",
+      "stock_level": 4000
+    },
+    {
+      "id": 94,
+      "category_id": 94,
+      "name": "Magnetic Shoe Fasteners",
+      "price": 40.00,
+      "currency": "USD",
+      "stock_level": 900
+    },
+    {
+      "id": 95,
+      "category_id": 53,
+      "name": "Self-Cleaning Countertop Material",
+      "price": 200.00,
+      "currency": "USD",
+      "stock_level": 200
+    },
+    {
+      "id": 96,
+      "category_id": 39,
+      "name": "Spatial Mapping Lidar Unit",
+      "price": 1500.00,
+      "currency": "USD",
+      "stock_level": 40
+    },
+    {
+      "id": 97,
+      "category_id": 6,
+      "name": "Personal Holographic Projector",
+      "price": 4000.00,
+      "currency": "USD",
+      "stock_level": 15
+    },
+    {
+      "id": 98,
+      "category_id": 69,
+      "name": "Muscle Oxygen Tracker",
+      "price": 80.00,
+      "currency": "USD",
+      "stock_level": 600
+    },
+    {
+      "id": 99,
+      "category_id": 99,
+      "name": "Recycled Ocean Plastic Laptop Sleeve",
+      "price": 35.00,
+      "currency": "USD",
+      "stock_level": 1500
     },
     {
       "id": 100,
-      "category_id": 5,
-      "name": "Self-Watering Herb Planter (Smart)",
-      "price": 60.00,
+      "category_id": 58,
+      "name": "Wearable Security Drone (Single Unit)",
+      "price": 700.00,
       "currency": "USD",
-      "stock_level": 400
+      "stock_level": 100
     }
   ]
 }
