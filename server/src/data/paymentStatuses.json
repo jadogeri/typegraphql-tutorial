@@ -1,0 +1,12 @@
+{
+    "paymentStatuses": [
+        { "id": 1, "status_name": "Pending" },
+        { "id": 2, "status_name": "Paid" },
+        { "id": 3, "status_name": "Failed" },
+        { "id": 4, "status_name": "Refunded" },
+        { "id": 5, "status_name": "Chargeback" },
+        { "id": 6, "status_name": "Partially Refunded" },
+        { "id": 7, "status_name": "Authorized" },
+        { "id": 8, "status_name": "Voided" }
+    ]  
+} 
