@@ -1,20 +1,25 @@
-# ci.yml
-# This file contains CI job definitions (templates)
+name: CI Logic
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        type: string
+        default: '22.x'
 
-.build-job:
-  stage: build
-  script:
-    - echo "Starting build..."
-    - echo "Building the application..."
-    - echo "Build complete."
-  artifacts:
-    paths:
-      - build/ # Path to the built application, to be passed to the CD stage
-    expire_in: 1 week
-
-.test-job:
-  stage: test
-  script:
-    - echo "Starting tests..."
-    - echo "Running unit tests and integration tests."
-    - echo "Tests passed."
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'server/package-lock.json'
+      - run: npm install --force
+      - run: npm run build --if-present
+      - run: npm run test
