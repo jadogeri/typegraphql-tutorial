@@ -2,3 +2,5 @@ https://blog.logrocket.com/build-graphql-typegraphql-typeorm/
 https://typegraphql.com/docs/installation.html
 https://easydevv.com/type-graphql-tutorial-with-code-examples/
 https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html
+
+node upgrade
