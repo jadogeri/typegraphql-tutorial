@@ -9,6 +9,10 @@ on:
 jobs:
   run-deploy:
     runs-on: ubuntu-latest
+    # This sets the working directory for ALL run commands in this job
+    defaults:
+      run:
+        working-directory: server
     steps:
       - uses: actions/checkout@v4
       - name: Install Vercel CLI
