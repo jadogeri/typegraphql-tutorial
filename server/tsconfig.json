@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "rootDirs": ["src"],
     "outDir": "dist",
     "lib": ["es2023"],
@@ -7,6 +9,10 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "esModuleInterop": true,
-    "types": ["node"]
-  }
+    "types": ["node", "jest"]
+  },
+  "include": [
+    "./**/*.ts", "./*.ts", "./**/**.*.ts","./**/**.*.ts"
+, "jest.config.ts","src/**/*.ts", "src/@types/**/*.d.ts", "tests/e2e/controllers/UserController/container.e2e.tesxt.ts"  ],
+  "exclude": ["./node_modules/*","node_modules"],
 }
