@@ -5,6 +5,7 @@
  * @filename order-status.entity.ts
  * @file Order Status Entity Definition using TypeORM and TypeGraphQL
  */
+"reflect-metadata";
 import { IsNumber, IsString } from "class-validator";
 import { ObjectType, Field, ID } from "type-graphql";
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm";

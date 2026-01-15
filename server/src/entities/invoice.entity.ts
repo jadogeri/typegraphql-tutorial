@@ -17,7 +17,7 @@ export class Invoice {
   @Column({ type: "decimal", precision: 10, scale: 2 })
   grand_total: number;
 
-  @Field()
+  @Field(() => String)
   @Column({ type: "date" })
   billing_date: string;
 
@@ -26,7 +26,7 @@ export class Invoice {
   @JoinColumn({ name: "order_id" })
   order: Order;
 
-  @Field()
-  @Column()
+  @Field(() => String)
+  @Column({ type: "int" })
   order_id: number;
 }
