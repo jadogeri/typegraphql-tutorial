@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from "typeorm";
 import { ObjectType, Field, ID, Float } from "type-graphql";
-import { Order } from "./order.entity";
+import { Order } from "./order.entity.js";
 
 @ObjectType() // TypeGraphQL
 @Entity("invoices") // TypeORM

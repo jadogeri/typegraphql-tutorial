@@ -1,11 +1,11 @@
 import { DataSource } from "typeorm";
-import { Region } from "./entities/region.entity";
-import { Category } from "./entities/category.entity";
-import { PaymentMethod } from "./entities/payment-method.entity";
-import { PaymentStatus } from "./entities/payment-status.entity";
-import { OrderStatus } from "./entities/order-status.entity";
-import { Order } from "./entities/order.entity";
-import { Invoice } from "./entities/invoice.entity";
+import { Region } from "./entities/region.entity.js";
+import { Category } from "./entities/category.entity.js";
+import { PaymentMethod } from "./entities/payment-method.entity.js";
+import { PaymentStatus } from "./entities/payment-status.entity.js";
+import { OrderStatus } from "./entities/order-status.entity.js";
+import { Order } from "./entities/order.entity.js";
+import { Invoice } from "./entities/invoice.entity.js";
 
 export const AppDataSource = new DataSource({
     type: "better-sqlite3", // or "mysql", "sqlite", etc.

@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, OneToMany, In } from "typeorm";
 import { ObjectType, Field, ID } from "type-graphql";
-import { Invoice } from "./invoice.entity";
+import { Invoice } from "./invoice.entity.js";
 
 @ObjectType()
 @Entity("orders")
