@@ -23,7 +23,7 @@
   "type": "module",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "dev": "tsx watch src src/index.ts"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.0.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
