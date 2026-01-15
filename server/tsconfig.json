@@ -9,6 +9,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "esModuleInterop": true,
+    "sourceMap": true,
     "types": ["node", "jest"]
   },
   "include": [
