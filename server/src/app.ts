@@ -1,6 +1,6 @@
 "reflect-metadata";
 import express, { Request, Response } from 'express';
-import { connect } from './data-source';
+import { connect } from './data-source.js';
 
 const app = express();
 
