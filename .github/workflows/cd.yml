@@ -1,0 +1,11 @@
+# cd.yml
+# This file contains CD job definitions
+
+.deploy-job:
+  stage: deploy
+  script:
+    - echo "Starting deployment to production..."
+    - echo "Deploying the application artifact from the build stage."
+    - echo "Deployment complete."
+  environment: production
+  # 'dependencies: true' is the default, ensuring artifacts from previous stages are available

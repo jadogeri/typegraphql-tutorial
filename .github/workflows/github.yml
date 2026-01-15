@@ -1,0 +1,26 @@
+# .gitlab-ci.yml
+# This is the main pipeline file that orchestrates CI/CD stages
+
+include:
+  - local: 'ci.yml'
+  - local: 'cd.yml'
+
+stages:
+  - build
+  - test
+  - deploy
+
+# Call the jobs defined in the included files
+# The jobs are given unique names here (e.g., app-build) and extend the templates
+
+app-build:
+  extends: .build-job
+
+app-test:
+  extends: .test-job
+
+app-deploy:
+  extends: .deploy-job
+  rules:
+    # Only run the deploy job when pushing to the main branch
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
