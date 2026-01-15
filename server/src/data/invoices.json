@@ -5,442 +5,346 @@
       "order_id": 1,
       "billing_date": "2026-01-12",
       "tax_amount": 72.00,
-      "grand_total": 971.99,
-      "payment_status": "Paid",
-      "payment_method": "Digital Wallet"
+      "grand_total": 971.99
     },
     {
       "id": 11,
       "order_id": 2,
       "billing_date": "2026-01-12",
       "tax_amount": 120.50,
-      "grand_total": 1540.25,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 1540.25
     },
     {
       "id": 12,
       "order_id": 3,
       "billing_date": "2026-01-12",
       "tax_amount": 45.75,
-      "grand_total": 450.00,
-      "payment_status": "Pending",
-      "payment_method": "Bank Transfer"
+      "grand_total": 450.00
     },
     {
       "id": 13,
       "order_id": 4,
       "billing_date": "2026-01-12",
       "tax_amount": 90.00,
-      "grand_total": 1200.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 1200.00
     },
     {
       "id": 14,
       "order_id": 5,
       "billing_date": "2026-01-12",
       "tax_amount": 30.15,
-      "grand_total": 299.99,
-      "payment_status": "Paid",
-      "payment_method": "Digital Wallet"
+      "grand_total": 299.99
     },
     {
       "id": 15,
       "order_id": 6,
       "billing_date": "2026-01-12",
       "tax_amount": 65.40,
-      "grand_total": 875.50,
-      "payment_status": "Pending",
-      "payment_method": "Credit Card"
+      "grand_total": 875.50
     },
     {
       "id": 16,
       "order_id": 7,
       "billing_date": "2026-01-12",
       "tax_amount": 15.00,
-      "grand_total": 150.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 150.00
     },
     {
       "id": 17,
       "order_id": 8,
       "billing_date": "2026-01-12",
       "tax_amount": 220.00,
-      "grand_total": 2500.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 2500.00
     },
     {
       "id": 18,
       "order_id": 9,
       "billing_date": "2026-01-12",
       "tax_amount": 8.99,
-      "grand_total": 89.99,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 89.99
     },
     {
       "id": 19,
       "order_id": 10,
       "billing_date": "2026-01-12",
       "tax_amount": 55.60,
-      "grand_total": 600.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 600.00
     },
     {
       "id": 20,
       "order_id": 11,
       "billing_date": "2026-01-12",
       "tax_amount": 7.50,
-      "grand_total": 75.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 75.00
     },
     {
       "id": 21,
       "order_id": 12,
       "billing_date": "2026-01-12",
       "tax_amount": 12.00,
-      "grand_total": 120.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 120.00
     },
     {
       "id": 22,
       "order_id": 13,
       "billing_date": "2026-01-12",
       "tax_amount": 3.00,
-      "grand_total": 30.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 30.00
     },
     {
       "id": 23,
       "order_id": 14,
       "billing_date": "2026-01-12",
       "tax_amount": 180.00,
-      "grand_total": 2100.00,
-      "payment_status": "Pending",
-      "payment_method": "Bank Transfer"
+      "grand_total": 2100.00
     },
     {
       "id": 24,
       "order_id": 15,
       "billing_date": "2026-01-12",
       "tax_amount": 40.00,
-      "grand_total": 400.00,
-      "payment_status": "Paid",
-      "payment_method": "Digital Wallet"
+      "grand_total": 400.00
     },
     {
       "id": 25,
       "order_id": 16,
       "billing_date": "2026-01-12",
       "tax_amount": 5.50,
-      "grand_total": 55.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 55.00
     },
     {
       "id": 26,
       "order_id": 17,
       "billing_date": "2026-01-12",
       "tax_amount": 88.00,
-      "grand_total": 999.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 999.00
     },
     {
       "id": 27,
       "order_id": 18,
       "billing_date": "2026-01-12",
       "tax_amount": 0.00,
-      "grand_total": 15.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 15.00
     },
     {
       "id": 28,
       "order_id": 19,
       "billing_date": "2026-01-12",
       "tax_amount": 6.25,
-      "grand_total": 62.50,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 62.50
     },
     {
       "id": 29,
       "order_id": 20,
       "billing_date": "2026-01-12",
       "tax_amount": 110.00,
-      "grand_total": 1350.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 1350.00
     },
     {
       "id": 30,
       "order_id": 21,
       "billing_date": "2026-01-12",
       "tax_amount": 25.00,
-      "grand_total": 250.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 250.00
     },
     {
       "id": 31,
       "order_id": 22,
       "billing_date": "2026-01-12",
       "tax_amount": 12.50,
-      "grand_total": 125.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 125.00
     },
     {
       "id": 32,
       "order_id": 23,
       "billing_date": "2026-01-12",
       "tax_amount": 1.99,
-      "grand_total": 19.99,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 19.99
     },
     {
       "id": 33,
       "order_id": 24,
       "billing_date": "2026-01-12",
       "tax_amount": 56.75,
-      "grand_total": 650.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 650.00
     },
     {
       "id": 34,
       "order_id": 25,
       "billing_date": "2026-01-12",
       "tax_amount": 330.00,
-      "grand_total": 3500.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 3500.00
     },
     {
       "id": 35,
       "order_id": 26,
       "billing_date": "2026-01-12",
       "tax_amount": 42.00,
-      "grand_total": 420.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 420.00
     },
     {
       "id": 36,
       "order_id": 27,
       "billing_date": "2026-01-12",
       "tax_amount": 9.99,
-      "grand_total": 99.99,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 99.99
     },
     {
       "id": 37,
       "order_id": 28,
       "billing_date": "2026-01-12",
       "tax_amount": 10.00,
-      "grand_total": 100.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 100.00
     },
     {
       "id": 38,
       "order_id": 29,
       "billing_date": "2026-01-12",
       "tax_amount": 75.00,
-      "grand_total": 800.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 800.00
     },
     {
       "id": 39,
       "order_id": 30,
       "billing_date": "2026-01-12",
       "tax_amount": 150.00,
-      "grand_total": 1800.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 1800.00
     },
     {
       "id": 40,
       "order_id": 31,
       "billing_date": "2026-01-12",
       "tax_amount": 5.00,
-      "grand_total": 50.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 50.00
     },
     {
       "id": 41,
       "order_id": 32,
       "billing_date": "2026-01-12",
       "tax_amount": 2.50,
-      "grand_total": 25.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 25.00
     },
     {
       "id": 42,
       "order_id": 33,
       "billing_date": "2026-01-12",
       "tax_amount": 0.50,
-      "grand_total": 5.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 5.00
     },
     {
       "id": 43,
       "order_id": 34,
       "billing_date": "2026-01-12",
       "tax_amount": 20.00,
-      "grand_total": 220.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 220.00
     },
     {
       "id": 44,
       "order_id": 35,
       "billing_date": "2026-01-12",
       "tax_amount": 95.00,
-      "grand_total": 1050.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 1050.00
     },
     {
       "id": 45,
       "order_id": 36,
       "billing_date": "2026-01-12",
       "tax_amount": 15.00,
-      "grand_total": 165.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 165.00
     },
     {
       "id": 46,
       "order_id": 37,
       "billing_date": "2026-01-12",
       "tax_amount": 7.00,
-      "grand_total": 77.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 77.00
     },
     {
       "id": 47,
       "order_id": 38,
       "billing_date": "2026-01-12",
       "tax_amount": 3.20,
-      "grand_total": 32.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 32.00
     },
     {
       "id": 48,
       "order_id": 39,
       "billing_date": "2026-01-12",
       "tax_amount": 50.00,
-      "grand_total": 550.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 550.00
     },
     {
       "id": 49,
       "order_id": 40,
       "billing_date": "2026-01-12",
       "tax_amount": 250.00,
-      "grand_total": 3000.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 3000.00
     },
     {
       "id": 50,
       "order_id": 41,
       "billing_date": "2026-01-12",
       "tax_amount": 12.00,
-      "grand_total": 132.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 132.00
     },
     {
       "id": 51,
       "order_id": 42,
       "billing_date": "2026-01-12",
       "tax_amount": 6.00,
-      "grand_total": 66.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 66.00
     },
     {
       "id": 52,
       "order_id": 43,
       "billing_date": "2026-01-12",
       "tax_amount": 2.80,
-      "grand_total": 28.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 28.00
     },
     {
       "id": 53,
       "order_id": 44,
       "billing_date": "2026-01-12",
       "tax_amount": 80.00,
-      "grand_total": 900.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 900.00
     },
     {
       "id": 54,
       "order_id": 45,
       "billing_date": "2026-01-12",
       "tax_amount": 100.00,
-      "grand_total": 1100.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 1100.00
     },
     {
       "id": 55,
       "order_id": 46,
       "billing_date": "2026-01-12",
       "tax_amount": 3.50,
-      "grand_total": 38.50,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 38.50
     },
     {
       "id": 56,
-      "order_id": 47 ,
+      "order_id": 47,
       "billing_date": "2026-01-12",
       "tax_amount": 1.50,
-      "grand_total": 16.50,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 16.50
     },
     {
       "id": 57,
       "order_id": 48,
       "billing_date": "2026-01-12",
       "tax_amount": 0.80,
-      "grand_total": 8.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 8.00
     },
     {
       "id": 58,
       "order_id": 49,
       "billing_date": "2026-01-12",
       "tax_amount": 18.00,
-      "grand_total": 198.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
-    },
+      "grand_total": 198.00
+    }
+
+,
     {
       "id": 59,
       "order_id": 50,
@@ -522,158 +426,187 @@
       "payment_status": "Paid",
       "payment_method": "PayPal"
     },
+     {
+      "id": 59,
+      "order_id": 50,
+      "billing_date": "2026-01-12",
+      "tax_amount": 500.00,
+      "grand_total": 5500.00
+    },
+    {
+      "id": 60,
+      "order_id": 51,
+      "billing_date": "2025-01-24",
+      "tax_amount": 8.00,
+      "grand_total": 88.00
+    },
+    {
+      "id": 61,
+      "order_id": 52,
+      "billing_date": "2026-01-12",
+      "tax_amount": 4.00,
+      "grand_total": 44.00
+    },
+    {
+      "id": 62,
+      "order_id": 53,
+      "billing_date": "2026-01-12",
+      "tax_amount": 1.20,
+      "grand_total": 12.00
+    },
+    {
+      "id": 63,
+      "order_id": 54,
+      "billing_date": "2026-01-12",
+      "tax_amount": 25.00,
+      "grand_total": 275.00
+    },
+    {
+      "id": 64,
+      "order_id": 55,
+      "billing_date": "2026-01-12",
+      "tax_amount": 60.00,
+      "grand_total": 660.00
+    },
+    {
+      "id": 65,
+      "order_id": 56,
+      "billing_date": "2024-08-12",
+      "tax_amount": 11.00,
+      "grand_total": 121.00
+    },
+    {
+      "id": 66,
+      "order_id": 57,
+      "billing_date": "2024-08-12",
+      "tax_amount": 5.50,
+      "grand_total": 60.50
+    },
+    {
+      "id": 67,
+      "order_id": 58,
+      "billing_date": "2026-01-12",
+      "tax_amount": 2.40,
+      "grand_total": 24.00
+    },
     {
       "id": 68,
       "order_id": 59,
       "billing_date": "2026-01-12",
       "tax_amount": 45.00,
-      "grand_total": 495.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 495.00
     },
     {
       "id": 69,
       "order_id": 60,
       "billing_date": "2026-01-11",
       "tax_amount": 200.00,
-      "grand_total": 2200.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 2200.00
     },
     {
       "id": 70,
       "order_id": 61,
       "billing_date": "2025-01-12",
       "tax_amount": 20.00,
-      "grand_total": 220.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 220.00
     },
     {
       "id": 71,
       "order_id": 62,
       "billing_date": "2025-01-12",
       "tax_amount": 10.00,
-      "grand_total": 110.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 110.00
     },
     {
       "id": 72,
       "order_id": 63,
       "billing_date": "2025-01-15",
       "tax_amount": 4.80,
-      "grand_total": 48.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 48.00
     },
     {
       "id": 73,
       "order_id": 64,
       "billing_date": "2026-01-11",
       "tax_amount": 70.00,
-      "grand_total": 770.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 770.00
     },
     {
       "id": 74,
       "order_id": 65,
       "billing_date": "2026-01-11",
       "tax_amount": 350.00,
-      "grand_total": 3850.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 3850.00
     },
     {
       "id": 75,
       "order_id": 66,
       "billing_date": "2026-01-10",
       "tax_amount": 35.00,
-      "grand_total": 385.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 385.00
     },
     {
       "id": 76,
       "order_id": 67,
       "billing_date": "2026-01-10",
       "tax_amount": 17.50,
-      "grand_total": 192.50,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 192.50
     },
     {
       "id": 77,
       "order_id": 68,
       "billing_date": "2026-01-11",
       "tax_amount": 8.40,
-      "grand_total": 84.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 84.00
     },
     {
       "id": 78,
       "order_id": 69,
       "billing_date": "2026-01-09",
       "tax_amount": 105.00,
-      "grand_total": 1155.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 1155.00
     },
     {
       "id": 79,
       "order_id": 70,
       "billing_date": "2026-01-10",
       "tax_amount": 525.00,
-      "grand_total": 5775.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 5775.00
     },
     {
       "id": 80,
       "order_id": 71,
       "billing_date": "2026-01-10",
       "tax_amount": 50.00,
-      "grand_total": 550.00,
-      "payment_status": "Paid",
-      "payment_method": "Credit Card"
+      "grand_total": 550.00
     },
     {
       "id": 81,
       "order_id": 72,
       "billing_date": "2026-01-12",
       "tax_amount": 25.00,
-      "grand_total": 275.00,
-      "payment_status": "Paid",
-      "payment_method": "Debit Card"
+      "grand_total": 275.00
     },
     {
       "id": 82,
       "order_id": 73,
       "billing_date": "2026-01-11",
       "tax_amount": 12.00,
-      "grand_total": 120.00,
-      "payment_status": "Paid",
-      "payment_method": "PayPal"
+      "grand_total": 120.00
     },
     {
       "id": 83,
       "order_id": 74,
       "billing_date": "2026-01-12",
       "tax_amount": 150.00,
-      "grand_total": 1650.00,
-      "payment_status": "Pending",
-      "payment_method": "Digital Wallet"
+      "grand_total": 1650.00
     },
     {
       "id": 84,
       "order_id": 75,
       "billing_date": "2026-01-11",
       "tax_amount": 750.00,
-      "grand_total": 8250.00,
-      "payment_status": "Paid",
-      "payment_method": "Bank Transfer"
+      "grand_total": 8250.00
     }
   ]
 }
