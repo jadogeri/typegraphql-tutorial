@@ -1,13 +1,13 @@
 {
     "paymentMethods": [
-        { "id": 1, "method_name": "PayPal" },
-        { "id": 2, "method_name": "Credit Card" },
-        { "id": 3, "method_name": "Bank Transfer" },
-        { "id": 4, "method_name": "Cryptocurrency" },
-        { "id": 5, "method_name": "Mobile Payment" },
-        { "id": 6, "method_name": "Gift Card" },
-        { "id": 7, "method_name": "Cash on Delivery" },
-        { "id": 8, "method_name": "Digital Wallet" },
-        { "id": 9, "method_name": "Direct Debit" }
+        { "id": 1, "name": "PayPal" },
+        { "id": 2, "name": "Credit Card" },
+        { "id": 3, "name": "Bank Transfer" },
+        { "id": 4, "name": "Cryptocurrency" },
+        { "id": 5, "name": "Mobile Payment" },
+        { "id": 6, "name": "Gift Card" },
+        { "id": 7, "name": "Cash on Delivery" },
+        { "id": 8, "name": "Digital Wallet" },
+        { "id": 9, "name": "Direct Debit" }
     ]  
 } 
