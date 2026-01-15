@@ -7,6 +7,7 @@
     "lib": ["es2023"],
     "target": "es2023",
     "module": "esnext",
+    "strictPropertyInitialization": false,  
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "sourceMap": true,
