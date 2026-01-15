@@ -1,19 +1,26 @@
-name: CI/CD Pipeline
+name: Main Pipeline
 
 on:
   push:
     branches: ["main"]
+    paths: ["server/**"]
+  pull_request:
+    branches: ["main"]
+    paths: ["server/**"]
 
 jobs:
-  build:
-    # Use 'uses' with a path to your local workflow file to mimic 'include'
+  build-and-test:
     uses: ./.github/workflows/ci.yml
-
-  test:
-    needs: build
-    uses: ./.github/workflows/test.yml
+    # Passes required parameters to the CI file
+    with:
+      node-version: '22.x'
 
   deploy:
-    needs: test
-    if: github.ref == 'refs/heads/main'
+    needs: build-and-test
+    # Only deploy on pushes to main (not PRs)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     uses: ./.github/workflows/cd.yml
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

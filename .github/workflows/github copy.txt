@@ -1,0 +1,19 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    # Use 'uses' with a path to your local workflow file to mimic 'include'
+    uses: ./.github/workflows/ci.yml
+
+  test:
+    needs: build
+    uses: ./.github/workflows/test.yml
+
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/cd.yml
