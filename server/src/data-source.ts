@@ -4,13 +4,15 @@ import { Category } from "./entities/category.entity";
 import { PaymentMethod } from "./entities/payment-method.entity";
 import { PaymentStatus } from "./entities/payment-status.entity";
 import { OrderStatus } from "./entities/order-status.entity";
+import { Order } from "./entities/order.entity";
+import { Invoice } from "./entities/invoice.entity";
 
 export const AppDataSource = new DataSource({
     type: "better-sqlite3", // or "mysql", "sqlite", etc.
     database: process.env.DB_DATABASE || "userDB.sqlite",
     synchronize: true, // Use carefully in production
     logging: false,
-    entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus ], // List your entities here
+    entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
     migrations: [],
     subscribers: [],
 });
