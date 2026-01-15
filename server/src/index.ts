@@ -1,6 +1,6 @@
 
 
-import { app } from './app';
+import app from './app';
 import { connect } from './data-source';
 
 const PORT = 3000;
