@@ -27,7 +27,7 @@
     "ts-node": {
     "transpileOnly": true,
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "nodenext", 
     }
   }
   
