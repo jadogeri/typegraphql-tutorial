@@ -4,6 +4,9 @@ import { connect } from './data-source.js';
 
 const app = express();
 
+
+//middlewares
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
