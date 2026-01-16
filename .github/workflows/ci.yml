@@ -5,6 +5,12 @@ on:
       node-version:
         type: string
         default: '20.x'
+    # Add this block:
+    secrets:
+      TURSO_DATABASE_URL:
+        required: true
+      TURSO_AUTH_TOKEN:
+        required: true
 
 jobs:
   run-ci:
@@ -12,8 +18,6 @@ jobs:
 
     # Define environment variables for the entire job
     env:
-      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
-      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
       NODE_ENV: production # Set NODE_ENV for the entire 'build' job
 
     defaults:
@@ -36,6 +40,6 @@ jobs:
 
       - name: Run Tests
         run: npm run test
-        
+
       - name: Check The Environment Variable
         run: echo "NODE_ENV is $NODE_ENV" # Access with $NODE_ENV
