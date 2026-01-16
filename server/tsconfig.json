@@ -3,7 +3,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "rootDirs": ["src"],
-    "outDir": "dist",
+    "outDir": "./dist",
     "lib": ["es2023"],
     "target": "es2023",
     "module": "esnext",
