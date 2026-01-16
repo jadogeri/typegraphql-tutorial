@@ -34,6 +34,7 @@
     "migration:revert": "npx typeorm-ts-node-commonjs migration:revert --dataSource ./src/configs/typeOrm.config.ts"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.2.0",
     "@libsql/client": "^0.17.0",
     "better-sqlite3": "^12.6.0",
     "class-validator": "^0.14.3",
