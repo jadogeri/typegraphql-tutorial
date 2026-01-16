@@ -24,11 +24,5 @@
 ],
   "exclude": ["./node_modules/*","node_modules"  ],
     "files": ["env.d.ts"],
-    "ts-node": {
-    "transpileOnly": true,
-    "compilerOptions": {
-      "module": "nodenext", 
-    }
-  }
   
 }
