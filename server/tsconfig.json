@@ -22,7 +22,8 @@
     "env.d.ts"
 , "jest.config.ts"
 ],
-  "exclude": ["./node_modules/*","node_modules"  ],
+  "exclude": ["./node_modules/*","node_modules",   "tests/**/*",
+    "tests"  ],
     "files": ["env.d.ts"],
   
 }
