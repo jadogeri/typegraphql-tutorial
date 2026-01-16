@@ -1,6 +1,7 @@
 "reflect-metadata";
 import express, { Request, Response } from 'express';
-import { connect } from './data-source.js';
+import { AppDataSource } from './configs/typeOrm.config.js';
+import { connect } from './dataSourceConnector.js';
 
 const app = express();
 
@@ -9,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-await connect(); // Ensure database connection is established
+await connect(AppDataSource); // Ensure database connection is established
 
 // Define a basic route
 app.get('/home', (req: Request, res: Response) => {
