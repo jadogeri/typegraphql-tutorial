@@ -42,10 +42,19 @@ jobs:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: production
+      - name: Install Sqlite Alias
+        run: | 
+          npm install sqlite3@npm:@libsql/sqlite3
+          npm install sqlite3
+          npm install @types/sqlite3
+        env:
+          # Mapping the inherited secrets to the environment
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          NODE_ENV: production
       - name: Run Database Migrations
         # TypeORM will automatically pick up the env variables from the job level
         run: |
-          npm install sqlite3@npm:@libsql/sqlite3
           npm run migration:generate && echo "Migrations applied successfully."
           npm run migration:run && echo "Migrations completed successfully."
         # Mapping the inherited secrets to the environment
