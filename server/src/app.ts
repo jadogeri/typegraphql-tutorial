@@ -4,7 +4,7 @@ import { connect } from './data-source.js';
 
 const app = express();
 
-
+// Middleware to parse JSON bodies
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
