@@ -14,7 +14,7 @@ export const AppDataSource = new DataSource({
     database: process.env.NODE_ENV === "production" ? 
       process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL : 
       process.env.DEV_DATABASE_URL || "userDB.sqlite",
-    synchronize: false, // Use carefully in production
+    synchronize: process.env.NODE_ENV !== "production" ,
     logging: false,
     entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
     migrations: [],

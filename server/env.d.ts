@@ -33,6 +33,9 @@ declare global {
             TEST_DATABASE_URL : string;
             PROD_DATABASE_URL : string;
             DEV_DATABASE_URL : string;
+            TURSO_DATABASE_URL : string;
+            TURSO_AUTH_TOKEN : string;
+            SYNCRONIZE_DB : string ;
         }
     }
 }
