@@ -15,10 +15,13 @@ import { Order } from "../entities/order.entity.js";
 import { Invoice } from "../entities/invoice.entity.js";
 import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
+import * as libsql from "@libsql/sqlite3"; //
+
+
 
 const options: DataSourceOptions & SeederOptions = {
     type:  "sqlite" , // or "mysql", "sqlite", etc.
-    driver: require("@libsql/sqlite3"),
+    driver: libsql, // Use the imported module directly
     flags: 0x00000040 , // required for TypeORM with libsql
     database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
     synchronize: false,
