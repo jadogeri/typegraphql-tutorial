@@ -17,13 +17,11 @@ import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
 
 const options: DataSourceOptions & SeederOptions = {
-    type: process.env.NODE_ENV !== "production" ? "sqlite" : "better-sqlite3", // or "mysql", "sqlite", etc.
-    driver: process.env.NODE_ENV === "!roduction" ? require("@libsql/sqlite3") : null,
-    flags: process.env.NODE_ENV !== "production" ? 0x00000040 : undefined, // required for TypeORM with libsql
-    database: process.env.NODE_ENV !== "test" || process.env.NODE_ENV === "staging"|| process.env.NODE_ENV === "development" ? 
-      process.env.DEV_DATABASE_URL || "userDB.sqlite" :   
-      process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
-    synchronize: process.env.NODE_ENV === "production" ,
+    type:  "sqlite" , // or "mysql", "sqlite", etc.
+    driver: require("@libsql/sqlite3"),
+    flags: 0x00000040 , // required for TypeORM with libsql
+    database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
+    synchronize: false,
     logging: false,
     entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
     migrations: ["src/migrations/**/*.ts"],
