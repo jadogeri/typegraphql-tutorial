@@ -10,8 +10,12 @@ app.use(express.urlencoded({ extended: true }));
 await connect(); // Ensure database connection is established
 
 // Define a basic route
-app.get('/', (req: Request, res: Response) => {
+app.get('/home', (req: Request, res: Response) => {
   res.send('Hello World with TypeScript and Express!');
+});
+
+app.get('/', (req: Request, res: Response) => {
+  res.json({ message: 'get  received successfully'});
 });
 
 app.post('/', (req: Request, res: Response) => {
