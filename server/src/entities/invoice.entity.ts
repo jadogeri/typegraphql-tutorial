@@ -1,3 +1,12 @@
+
+/**
+ * @author Joseph Adogeri
+ * @version 1.0.0
+ * @since 15-JAN-2026
+ * @filename invoice.entity.ts
+ * @file Invoice Entity Definition using TypeORM and TypeGraphQL
+ */
+
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn, Relation } from "typeorm";
 import { ObjectType, Field, ID, Float } from "type-graphql";
 import { Order } from "./order.entity.js";
