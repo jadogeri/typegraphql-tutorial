@@ -13,7 +13,7 @@ jobs:
     uses: ./.github/workflows/ci.yml
     # Passes required parameters to the CI file
     with:
-      node-version: '24.x'
+      node-version: '22.x'
 
   deploy:
     needs: build-and-test

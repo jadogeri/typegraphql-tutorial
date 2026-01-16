@@ -4,7 +4,7 @@ on:
     inputs:
       node-version:
         type: string
-        default: '24.x'
+        default: '22.x'
 
 jobs:
   run-ci:
