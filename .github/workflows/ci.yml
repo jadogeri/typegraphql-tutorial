@@ -48,6 +48,7 @@ jobs:
           # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          NODE_ENV: testcd 
 
       - name: Check The Environment Variable
         run: echo "NODE_ENV is $NODE_ENV"
