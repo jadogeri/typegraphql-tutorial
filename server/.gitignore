@@ -32,3 +32,6 @@ yarn-error.log*
 
 
 .early.coverage
+
+#migrations
+/src/migrations/*.ts
