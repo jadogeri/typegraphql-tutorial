@@ -24,7 +24,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "tsx watch src src/index.ts",
-    "test": "cross-env NODE_ENV=test jest --coverage",
+    "test": "jest --coverage",
     "dev": "cross-env NODE_ENV=development tsx watch src src/index.ts",
     "build": "tsc"
   },
