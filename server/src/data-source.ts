@@ -1,3 +1,10 @@
+/**
+ * @author Joseph Adogeri
+ * @version 1.0.0
+ * @since 16-JAN-2026
+ * @filename data-source.ts
+ * @file DataSource configuration for TypeORM
+ */
 import { DataSource } from "typeorm";
 import { Region } from "./entities/region.entity.js";
 import { Category } from "./entities/category.entity.js";
