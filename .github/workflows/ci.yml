@@ -7,10 +7,8 @@ on:
         default: '20.x'
     # Important: Re-add the secret declarations here so the runner knows to expect them
     secrets:
-      TURSO_DATABASE_URL:
-        required: true
-      TURSO_AUTH_TOKEN:
-        required: true
+      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
 jobs:
   run-ci:
