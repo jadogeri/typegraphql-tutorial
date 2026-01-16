@@ -1,25 +1,22 @@
+import type { Config } from 'jest';
 
- import { createDefaultPreset } from "ts-jest";
-
-const tsJestTransformCfg = createDefaultPreset().transform;
-
-/** @type {import("jest").Config} **/
-export default {
-  testEnvironment: "node",
+const config: Config = {
+  preset: 'ts-jest/presets/default-esm', // Use ESM preset
+  testEnvironment: 'node',
+  extensionsToTreatAsEsm: ['.ts'],
   transform: {
-    ...tsJestTransformCfg,
-    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+    // Transform TypeScript files with ts-jest in ESM mode
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        useESM: true,
+      },
+    ],
   },
-//   transformIgnorePatterns: ["/node_modules/(?!(@josephadogeridev/auth-credential-validator-ts)/)"],
-  globalTeardown: '<rootDir>/tests/__configurations__/global-teardown.ts',
-  setupFilesAfterEnv: ['<rootDir>/tests/__configurations__/setupFilesAfterEnv.ts'],
-  globalSetup: '<rootDir>/tests/__configurations__/global-setup.ts',
-  testRunner: "jest-circus/runner",
-  workerIdleMemoryLimit: "512MB",
-  coveragePathIgnorePatterns: [
-      "<rootDir>/tests/"
-  ]
-
+  moduleNameMapper: {
+    // Handle .js extensions in imports (required for true ESM)
+    '^(\\.\\.?\\/.+)\\.js$': '$1',
+  },
 };
 
-       
+export default config;
