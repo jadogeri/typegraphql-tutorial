@@ -16,5 +16,6 @@
   "include": [
     "./**/*.ts", "./*.ts", "./**/**.*.ts","env.d.ts"
 , "jest.config.ts","src/**/*.ts", "src/@types/**/*.d.ts",   ],
-  "exclude": ["./node_modules/*","node_modules" ],
+  "exclude": ["./node_modules/*","node_modules",    "**/*.test.ts", 
+    "tests/__configurations__","tests"  ],
 }
