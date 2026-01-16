@@ -8,8 +8,12 @@ import { Order } from "./entities/order.entity.js";
 import { Invoice } from "./entities/invoice.entity.js";
 
 export const AppDataSource = new DataSource({
-    type: "better-sqlite3", // or "mysql", "sqlite", etc.
-    database: process.env.DB_DATABASE || "userDB.sqlite",
+    type: process.env.NODE_ENV === "production" ? "sqlite" : "better-sqlite3", // or "mysql", "sqlite", etc.
+    driver: process.env.NODE_ENV === "production" ? require("@libsql/sqlite3") : null,
+    flags: process.env.NODE_ENV === "production" ? 0x00000040 : undefined, // required for TypeORM with libsql
+    database: process.env.NODE_ENV === "production" ? 
+      process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL : 
+      process.env.DEV_DATABASE_URL || "userDB.sqlite",
     synchronize: false, // Use carefully in production
     logging: false,
     entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
@@ -23,3 +27,4 @@ export const AppDataSource = new DataSource({
       console.log("🛢️  Database connected and DataSource bound.");
     }
   }
+
