@@ -44,7 +44,7 @@ jobs:
           NODE_ENV: production
       - name: Install Sqlite Alias
         run: | 
-          npm install sqlite3@npm:@libsql/sqlite3
+          npm install sqlite3@npm:@libsql/sqlite3  --legacy-peer-deps
           npm install sqlite3
           npm install @types/sqlite3
         env:
