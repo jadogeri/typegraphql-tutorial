@@ -34,7 +34,6 @@ jobs:
           # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
-          NODE_ENV: production
 
       - name: Build Project
         run: npm run build --if-present
