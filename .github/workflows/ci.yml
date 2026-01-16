@@ -6,6 +6,9 @@ on:
         type: string
         default: '20.x'
     # Important: Re-add the secret declarations here so the runner knows to expect them
+    secrets:
+      TURSO_DATABASE_URL: { required: true }
+      TURSO_AUTH_TOKEN: { required: true }  
 
 jobs:
   run-ci:
@@ -27,12 +30,24 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        env:
+          # Mapping the inherited secrets to the environment
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
       - name: Build Project
         run: npm run build --if-present
+        env:
+          # Mapping the inherited secrets to the environment
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
       - name: Run Tests
         run: npm run test
+        env:
+          # Mapping the inherited secrets to the environment
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
       - name: Check The Environment Variable
         run: echo "NODE_ENV is $NODE_ENV"
