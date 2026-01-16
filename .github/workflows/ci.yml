@@ -63,7 +63,7 @@ jobs:
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
       - name: Run Tests
-        run: npm run test
+        run: npm run test -- --no-cache
         env:
           # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
