@@ -1,5 +1,4 @@
-
-export const sum = (a: number, b: number): number => { // A simple function to add two numbers
+const sum = (a: number, b: number): number => { // A simple function to add two numbers
   return a + b;
 }
 
