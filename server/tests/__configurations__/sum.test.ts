@@ -1,7 +1,4 @@
-import dotenv from 'dotenv'; // Import dotenv to manage environment variables 
-dotenv.config(); // Load environment variables from .env file
 
-console.log('NODE_ENV:', process.env.NODE_ENV); // Log the current NODE_ENV to verify it's set correctly
 const sum = (a: number, b: number): number => { // A simple function to add two numbers
   return a + b;
 }
