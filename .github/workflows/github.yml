@@ -15,18 +15,11 @@ jobs:
     with:
       node-version: '20.x'
     # Passes all secrets (Turso, etc.) to the CI workflow
-    secrets: 
-      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
-      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+    secrets: inherit
 
   deploy:
     needs: build-and-test
     # Only deploy on pushes to main (not PRs)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     uses: ./.github/workflows/cd.yml
-    secrets:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
-      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+    secrets: inherit
