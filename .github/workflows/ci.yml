@@ -45,6 +45,7 @@ jobs:
       - name: Run Database Migrations
         # TypeORM will automatically pick up the env variables from the job level
         run: |
+          npm install sqlite3@npm:@libsql/sqlite3
           npm run migration:generate && echo "Migrations applied successfully."
           npm run migration:run && echo "Migrations completed successfully."
         # Mapping the inherited secrets to the environment

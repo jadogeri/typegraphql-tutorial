@@ -44,7 +44,7 @@
     "graphql-scalars": "^1.25.0",
     "jest": "^30.2.0",
     "reflect-metadata": "^0.2.2",
-    "sqlite3": "^5.1.7",
+    "sqlite3": "npm:@libsql/sqlite3@^0.3.1",
     "ts-jest": "^29.4.6",
     "type-graphql": "^2.0.0-rc.2",
     "typeorm": "^0.3.28",
