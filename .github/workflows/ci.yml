@@ -5,20 +5,24 @@ on:
       node-version:
         type: string
         default: '20.x'
+    # Important: Re-add the secret declarations here so the runner knows to expect them
+    secrets:
+      TURSO_DATABASE_URL:
+        required: true
+      TURSO_AUTH_TOKEN:
+        required: true
 
 jobs:
   run-ci:
     runs-on: ubuntu-latest
-
-    # Define environment variables for the entire job
     env:
-      NODE_ENV: production # Set NODE_ENV for the entire 'build' job
-
+      NODE_ENV: production
     defaults:
       run:
         working-directory: server
     steps:
       - uses: actions/checkout@v4
+      
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -31,14 +35,15 @@ jobs:
 
       - name: Build Project
         run: npm run build --if-present
-
-        # Define secrets here, inside the step
-        env:
+        env: # Correctly indented (aligned with run)
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
       - name: Run Tests
         run: npm run test
+        env: # Tests usually need the DB secrets too
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
       - name: Check The Environment Variable
-        run: echo "NODE_ENV is $NODE_ENV" # Access with $NODE_ENV
+        run: echo "NODE_ENV is $NODE_ENV"
