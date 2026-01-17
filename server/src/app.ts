@@ -1,22 +1,36 @@
 "reflect-metadata";
-/*
+import express, { Request, Response, Application } from 'express';
+import { RegisterRoutes } from "./routes";
+import * as swaggerJson from "./swagger.json";
+import * as swaggerUI from "swagger-ui-express";
+import cors from 'cors';
+import { corsOptions } from './configs/cors.config';
 
 
-import express, { Request, Response } from 'express';
-import { AppDataSource } from './configs/typeOrm.config.js';
-import { connect } from './dataSourceConnector.js';
+// importing controllers to ensure they are registered
+import "./controllers/category.controller";
 
-const app = express();
-
+import { bootstrap } from './bootstrap';
 
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-await connect(AppDataSource); // Ensure database connection is established
+export const buildApp = () : Application  =>{
 
-// Define a basic route
-app.get('/home', (req: Request, res: Response) => {
+  const app: Application = express();
+
+  //middlewares
+  app.use(express.json())
+  app.use(express.urlencoded({ extended: true }));
+
+  // Use the configured CORS middleware
+  app.use(cors(corsOptions));
+  // Enable pre-flight requests for all routes (necessary when using specific headers/methods)
+  //app.options('*', cors(corsOptions) as any); 
+
+
+  RegisterRoutes(app);
+
+  app.get('/home', (req: Request, res: Response) => {
   res.send('Hello World with TypeScript and Express!');
 });
 
@@ -37,68 +51,20 @@ app.put('/', (req: Request, res: Response) => {
   res.json({ message: 'put  received successfully'});  
 });
 
-export default app;
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-import express,{ Application } from 'express';
-import * as bodyParser from "body-parser";
-import { RegisterRoutes } from "./routes";
-import * as swaggerJson from "./swagger.json";
-import * as swaggerUI from "swagger-ui-express";
-import cors from 'cors';
-import { corsOptions } from './configs/cors.config';
-import fs from 'node:fs';
-import path from 'node:path';
-
-
-// importing controllers to ensure they are registered
-import "./controllers/user.controller";
-import "./controllers/auth.controller";
-import "./controllers/profile.controller";
-
-
-
-export const buildApp = () : Application  =>{
-
-  const app: Application = express();
-
-  //middlewares
-  app.use(express.json())
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
-
-  // Use the configured CORS middleware
-  app.use(cors(corsOptions));
-  // Enable pre-flight requests for all routes (necessary when using specific headers/methods)
-  //app.options('*', cors(corsOptions) as any); 
-
-
-  RegisterRoutes(app);
   
-  app.use(["/openapi", "/docs", "/swagger"], swaggerUI.serve, swaggerUI.setup(swaggerJson));
+app.use(["/openapi", "/docs", "/swagger"], swaggerUI.serve, swaggerUI.setup(swaggerJson));
 
-// app.use(globalErrorHandler);
-// app.use(noRouteFoundHandler)
 
   return app;
     
 }
 
-if(process.env.NODE_ENV !== 'production'){
+if(process.env.NODE_ENV === 'production'){
+  console.log("value of NODE_ENV", process.env.NODE_ENV);
+  console.log("⚙️  Building app in production mode");  
+  await bootstrap();
 }
+
 
 export default buildApp();
 
