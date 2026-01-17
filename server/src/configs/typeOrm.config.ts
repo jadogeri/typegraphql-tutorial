@@ -24,23 +24,39 @@ const TURSO_DATABASE_URL = process.env.TURSO_DATABASE_URL;
 console.log("TURSO_AUTH_TOKEN:", TURSO_AUTH_TOKEN);
 console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 
-const options: DataSourceOptions & SeederOptions = {
-    type:  "sqlite" , // or "mysql", "sqlite", etc.
-    driver: libsql, // Use the imported module directly
-    flags: 0x00000040 , // required for TypeORM with libsql
-    database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
-    synchronize: false,
-    logging: false,
-    entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
-    migrations: ["src/migrations/**/*.ts"],
-    subscribers: [],
+const prodOptions: DataSourceOptions & SeederOptions = {
+  type:  "sqlite" , // or "mysql", "sqlite", etc.
+  driver: libsql, // Use the imported module directly
+  flags: 0x00000040 , // required for TypeORM with libsql
+  database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
+  synchronize: false,
+  logging: false,
+  entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
+  migrations: ["src/migrations/**/*.ts"],
+  subscribers: [],
   
+}
+
+const devOptions: DataSourceOptions & SeederOptions = {
+  type: "better-sqlite3",
+  database: process.env.DEV_DATABASE_URL || "dev-database.sqlite",
+  synchronize: true,
+  logging: true,
+  entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
+  migrations: ["src/migrations/**/*.ts"],
+  subscribers: [],
 }
 
 
 
-const env : NodeEnvironment = process.env.NODE_ENV || 'development';
+const env : NodeEnvironment = process.env.NODE_ENV ;
 console.log(`Current Environment: ${env}`);
+let options: DataSourceOptions & SeederOptions;
 
+if (env === "production") {
+  options = prodOptions;
+} else {
+  options = devOptions;
+}
   
 export const AppDataSource = new DataSource(options);
