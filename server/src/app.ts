@@ -1,10 +1,10 @@
 "reflect-metadata";
 import express, { Request, Response, Application } from 'express';
-import { RegisterRoutes } from "./routes";
+import { RegisterRoutes } from "./routes.js";
 import * as swaggerJson from "./swagger.json";
 import * as swaggerUI from "swagger-ui-express";
 import cors from 'cors';
-import { corsOptions } from './configs/cors.config';
+import { corsOptions } from './configs/cors.config.js';
 
 
 // importing controllers to ensure they are registered
