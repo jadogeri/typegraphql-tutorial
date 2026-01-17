@@ -26,8 +26,7 @@
     "start": "tsx watch src src/index.ts",
     "test": "jest --coverage",
     "dev": "cross-env NODE_ENV=development tsx watch src src/index.ts",
-    "build": "npm run swagger:generate && npm run tsc:post-build",
-    "tsc:post-build": "npx tsc-esm-fix --target=\"dist\" --ext=\".js\"",
+    "build": "npm run swagger:generate && tsc && tsc-esm-fix --target='dist'",
     "typeorm": "typeorm-ts-node-commonjs --dataSource ./src/configs/typeOrm.config.ts",
     "migration:create": "npx typeorm-ts-node-commonjs migration:create ./src/migrations/InitialSchemaSetup",
     "migration:generate": "npx tsx ./node_modules/typeorm/cli.js migration:generate ./src/migrations/InitialSchemaSetup --dataSource ./src/configs/typeOrm.config.ts --pretty",
@@ -52,7 +51,6 @@
     "reflect-metadata": "^0.2.2",
     "swagger-ui-express": "^5.0.1",
     "ts-jest": "^29.4.6",
-    "tsc-esm-fix": "^3.1.2",
     "tsoa": "^7.0.0-alpha.0",
     "type-graphql": "^2.0.0-rc.2",
     "typeorm": "^0.3.28",
@@ -68,6 +66,7 @@
     "@types/swagger-ui-express": "^4.1.8",
     "cross-env": "^10.1.0",
     "ts-node": "^10.9.2",
+    "tsc-esm-fix": "^3.1.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
