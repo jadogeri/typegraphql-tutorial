@@ -40,9 +40,6 @@ export class CategoryController extends BaseController implements CategoryContro
   deleteCategory(id: number): Promise<boolean> {
     return this.categoryService.deleteCategory(id);
   }
-
-
-
     
 }
 
