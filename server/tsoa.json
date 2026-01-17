@@ -3,7 +3,7 @@
   "noImplicitAdditionalProperties": "throw-on-extras",
   "controllerPathGlobs": ["src/**/*controller.ts"],
   "spec": {
-    "outputDirectory": "src", 
+    "outputDirectory": "src",
     "specVersion": 3,
     "securityDefinitions": {
       "jwt": {
@@ -14,16 +14,38 @@
         "scopes": {
           "ADMIN": "Admin privileges",
           "USER": "User privileges"
+
         }
       }    
+
     },
-    "name": "Ecommerce Project API",
-    "description": "Ecommerce server API documentation.",
+    "name": "Ecommerce API",
+    "description": "This is a sample Ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
     "version": "1.0.7",
+    "termsOfService": "http://swagger.io/terms/",
+    "license": {
+      "name": "MIT License",
+      "url": "opensource.org"
+    },
+    "contact": {
+      "name": "Joseph Adogeri",
+      "email": "johndoe@gmail.com",
+      "url": "http://example.com"
+    },
+    "spec": { 
     "tags": [
-      { "name": "Category", "description": "Category operations" },
-      { "name": "Product", "description": "Product management" },
-      { "name": "Order", "description": "Order management" }
+      {
+        "name": "Category",
+        "description": "Operations related to categories."
+      },
+      {
+        "name": "Order",
+        "description": "Operations related to orders."
+      },
+      {
+        "name": "Region",
+        "description": "Operations related to regions."
+      }
     ],
     "servers": [
       {
@@ -39,6 +61,7 @@
         "description": "Development Server (Local)"
       }
     ]
+    }
   },
   "routes": {
     "esm": true,
@@ -46,5 +69,5 @@
     "middleware": "express",
     "iocModule": "./src/configs/ioc.config.ts",
     "authenticationModule": "src/middlewares/authentication.middleware.ts"
-  }
+    }
 }

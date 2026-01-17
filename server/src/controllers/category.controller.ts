@@ -29,12 +29,12 @@ export class CategoryController extends BaseController implements CategoryContro
 
   
   @Post("/")
-  createCategory(@Body() name: string): Promise<Category> {
+  createCategory(@Body() name: any): Promise<Category> {
     return this.categoryService.createCategory(name);
   }
 
   @Patch("/{id}")
-  updateCategory(@Path() id: number, @Body() name: string): Promise<Category | null> {
+  updateCategory(@Path() id: number, @Body() name: any): Promise<Category | null> {
     return this.categoryService.updateCategory(id, name);
   }
   @Delete("/{id}")
