@@ -11,7 +11,6 @@ import "./controllers/category.controller";
 
 import { bootstrap } from './bootstrap';
 
-
 export const buildApp = () : Application  =>{
 
   const app: Application = express();

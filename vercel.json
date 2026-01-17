@@ -1,11 +1,11 @@
 {
   "version": 2,
+  "buildCommand": "tsoa routes && tsc && tsc-esm-fix --target='dist'",
   "builds": [
     {
       "src": "server/src/app.ts",
       "use": "@vercel/node",
-      "config": { "includeFiles": ["server/src/**"] },
-      "buildCommand": "tsoa routes && tsc && tsc-esm-fix --target='dist'"
+      "config": { "includeFiles": ["server/src/**"] }
     }
   ],
   "rewrites": [
