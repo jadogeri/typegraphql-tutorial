@@ -7,7 +7,7 @@ import cors from 'cors';
 import { corsOptions } from './configs/cors.config.js';
 
 // importing controllers to ensure they are registered
-import "./controllers/category.controller";
+import "./controllers/category.controller.js";
 
 import { bootstrap } from './bootstrap';
 
