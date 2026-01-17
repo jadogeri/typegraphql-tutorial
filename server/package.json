@@ -27,6 +27,7 @@
     "test": "jest --coverage",
     "dev": "cross-env NODE_ENV=development tsx watch src src/index.ts",
     "build": "npm run swagger:generate && tsc && tsc-esm-fix --target='dist'",
+    "dist":  "node dist/src/index.js",
     "typeorm": "typeorm-ts-node-commonjs --dataSource ./src/configs/typeOrm.config.ts",
     "migration:create": "npx typeorm-ts-node-commonjs migration:create ./src/migrations/InitialSchemaSetup",
     "migration:generate": "npx tsx ./node_modules/typeorm/cli.js migration:generate ./src/migrations/InitialSchemaSetup --dataSource ./src/configs/typeOrm.config.ts --pretty",
