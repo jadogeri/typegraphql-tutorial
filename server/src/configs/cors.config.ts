@@ -1,6 +1,5 @@
 import { CorsOptions } from 'cors';
 
-
 // Add a list of allowed origins (e.g., your frontend application's URL)
 const allowedOrigins = ['http://localhost:3000', 'https://www.yourapp.com', '*'];
 
