@@ -48,7 +48,6 @@ app.delete('/', (req: Request, res: Response) => {
 app.put('/', (req: Request, res: Response) => {
   res.json({ message: 'put  received successfully'});  
 });
-
   
 const CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";
 
