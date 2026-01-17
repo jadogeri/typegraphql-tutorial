@@ -1,4 +1,7 @@
 "reflect-metadata";
+/*
+
+
 import express, { Request, Response } from 'express';
 import { AppDataSource } from './configs/typeOrm.config.js';
 import { connect } from './dataSourceConnector.js';
@@ -35,3 +38,68 @@ app.put('/', (req: Request, res: Response) => {
 });
 
 export default app;
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+import express,{ Application } from 'express';
+import * as bodyParser from "body-parser";
+import { RegisterRoutes } from "./routes";
+import * as swaggerJson from "./swagger.json";
+import * as swaggerUI from "swagger-ui-express";
+import cors from 'cors';
+import { corsOptions } from './configs/cors.config';
+import fs from 'node:fs';
+import path from 'node:path';
+
+
+// importing controllers to ensure they are registered
+import "./controllers/user.controller";
+import "./controllers/auth.controller";
+import "./controllers/profile.controller";
+
+
+
+export const buildApp = () : Application  =>{
+
+  const app: Application = express();
+
+  //middlewares
+  app.use(express.json())
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
+
+  // Use the configured CORS middleware
+  app.use(cors(corsOptions));
+  // Enable pre-flight requests for all routes (necessary when using specific headers/methods)
+  //app.options('*', cors(corsOptions) as any); 
+
+
+  RegisterRoutes(app);
+  
+  app.use(["/openapi", "/docs", "/swagger"], swaggerUI.serve, swaggerUI.setup(swaggerJson));
+
+// app.use(globalErrorHandler);
+// app.use(noRouteFoundHandler)
+
+  return app;
+    
+}
+
+if(process.env.NODE_ENV !== 'production'){
+}
+
+export default buildApp();
+
+
