@@ -4,10 +4,10 @@
 import type { TsoaRoute } from '@tsoa/runtime';
 import {  fetchMiddlewares, ExpressTemplateService } from '@tsoa/runtime';
 // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-import { CategoryController } from './controllers/category.controller';
-import { expressAuthentication } from './middlewares/authentication.middleware';
+import { CategoryController } from './controllers/category.controller.js';
+import { expressAuthentication } from './middlewares/authentication.middleware.js';
 // @ts-ignore - no great way to install types from subpackage
-import { iocContainer } from './configs/ioc.config';
+import { iocContainer } from './configs/ioc.config.js';
 import type { IocContainer, IocContainerFactory } from '@tsoa/runtime';
 import type { Request as ExRequest, Response as ExResponse, RequestHandler, Router } from 'express';
 

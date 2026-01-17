@@ -5,6 +5,7 @@ import express, { Request, Response, Application } from 'express';
 import { RegisterRoutes } from "./routes.js";
 import * as swaggerJson from "./swagger.json" with { type: 'json' };
 import * as swaggerUI from "swagger-ui-express";
+import bodyParser from 'body-parser';
 import cors from 'cors';
 import { corsOptions } from './configs/cors.config.js';
 
@@ -22,6 +23,7 @@ export const buildApp = () : Application  =>{
 
   // Use the configured CORS middleware
   app.use(cors(corsOptions));
+  app.use(bodyParser.json());
   // Enable pre-flight requests for all routes (necessary when using specific headers/methods)
   //app.options('*', cors(corsOptions) as any); 
 

@@ -41,18 +41,12 @@
 	"info": {
 		"title": "Ecommerce Project API",
 		"version": "1.0.7",
-		"description": "This is a ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
-		"termsOfService": "http://swagger.io/terms/",
+		"description": "Ecommerce server API documentation.",
 		"license": {
-			"name": {
-				"name": "MIT License",
-				"url": "opensource.org"
-			}
+			"name": "MIT"
 		},
 		"contact": {
-			"name": "Joseph Adogeri",
-			"email": "johndoe@gmail.com",
-			"url": "http://example.com"
+			"name": "Joseph Adogeri"
 		}
 	},
 	"paths": {
@@ -226,30 +220,21 @@
 	},
 	"servers": [
 		{
-			"url": "http://localhost:3000",
-			"description": "Development server"
-		},
-		{
-			"url": "http://localhost:3000/api/v1",
-			"description": "Test Server"
-		},
-		{
-			"url": "http://prod:3000/api/v1",
-			"description": "Production server"
+			"url": "https://[object Object]/"
 		}
 	],
 	"tags": [
 		{
 			"name": "Category",
-			"description": "Operations related to product categories, including creation, retrieval, and updates."
+			"description": "Category operations"
 		},
 		{
 			"name": "Product",
-			"description": "Operations related to product management, including creation, retrieval, and updates."
+			"description": "Product management"
 		},
 		{
 			"name": "Order",
-			"description": "Operations related to order management, including creation, retrieval, and updates."
+			"description": "Order management"
 		}
 	]
 }
