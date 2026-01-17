@@ -5,7 +5,7 @@
     {
       "src": "server/src/app.ts",
       "use": "@vercel/node",
-      "config": { "includeFiles": ["server/src/**", "server/src/routes.js", "server/src/swagger.json", "node_modules/swagger-ui-dist/**"] }
+      "config": { "includeFiles": ["server/src/**", "server/src/routes.js", "server/src/swagger.json"] }
     }
   ],
   "rewrites": [
