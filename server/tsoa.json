@@ -26,7 +26,18 @@
       { "name": "Order", "description": "Order management" }
     ],
     "servers": [
-      { "url": "https://typegraphql-tutorial.vercel.app" }
+      {
+        "url": "https://typegraphql-tutorial.vercel.app",
+        "description": "Production Server"
+      },
+      {
+        "url": "https://test-api.vercel.app",
+        "description": "Test/Staging Server"
+      },
+      {
+        "url": "http://localhost:3000",
+        "description": "Development Server (Local)"
+      }
     ]
   },
   "routes": {

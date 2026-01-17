@@ -5,7 +5,6 @@ import express, { Request, Response, Application } from 'express';
 import { RegisterRoutes } from "./routes.js";
 import * as swaggerJson from "./swagger.json" with { type: 'json' };
 import * as swaggerUI from "swagger-ui-express";
-import bodyParser from 'body-parser';
 import cors from 'cors';
 import { corsOptions } from './configs/cors.config.js';
 
@@ -19,13 +18,13 @@ export const buildApp = (): Application => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(cors(corsOptions));
-  app.use(bodyParser.json());
 
   RegisterRoutes(app);
 
   app.get('/home', (req: Request, res: Response) => {
     res.send('Hello World with TypeScript and Express!');
   });
+  
 
   app.get('/', (req: Request, res: Response) => {
     res.json({ message: 'get received successfully' });
