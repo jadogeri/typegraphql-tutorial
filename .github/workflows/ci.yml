@@ -47,6 +47,7 @@ jobs:
           npm install sqlite3@npm:@libsql/sqlite3  --force
           npm install sqlite3 --force
           npm install @types/sqlite3 --force
+
         env:
           # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
@@ -57,10 +58,11 @@ jobs:
         run: |
           npm run migration:generate && echo "Migrations applied successfully."
           npm run migration:run && echo "Migrations completed successfully."
-        # Mapping the inherited secrets to the environment
+          echo "Node Environment: $NODE_ENV"  
         env:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          NODE_ENV: production
 
       - name: Run Tests
         run: npm run test -- --no-cache
