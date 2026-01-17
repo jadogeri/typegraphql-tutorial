@@ -6,48 +6,34 @@
     "outputDirectory": "src",
     "specVersion": 3,
     "name": "Ecommerce API",
-    "description": "This is a sample Ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
+    "description": "This is a sample Ecommerce server.",
     "version": "1.0.7",
-    "termsOfService": "http://swagger.io/terms/",
+    "termsOfService": "http://swagger.io",
     "license": {
       "name": "MIT License",
-      "url": "opensource.org"
+      "url": "https://opensource.org"
     },
     "contact": {
       "name": "Joseph Adogeri",
       "email": "johndoe@gmail.com",
       "url": "http://example.com"
     },
-    "spec": { 
-    "tags": [
-      {
-        "name": "Category",
-        "description": "Operations related to categories."
-      },
-      {
-        "name": "Order",
-        "description": "Operations related to orders."
-      },
-      {
-        "name": "Region",
-        "description": "Operations related to regions."
+    "securityDefinitions": {
+      "jwt": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
+    },
+    "tags": [
+      { "name": "Category", "description": "Operations related to categories." },
+      { "name": "Order", "description": "Operations related to orders." },
+      { "name": "Region", "description": "Operations related to regions." }
     ],
     "servers": [
-      {
-        "url": "https://typegraphql-tutorial.vercel.app",
-        "description": "Production Server"
-      },
-      {
-        "url": "https://test-api.vercel.app",
-        "description": "Test/Staging Server"
-      },
-      {
-        "url": "http://localhost:3000",
-        "description": "Development Server (Local)"
-      }
+      { "url": "https://typegraphql-tutorial.vercel.app", "description": "Production Server" },
+      { "url": "http://localhost:3000", "description": "Development Server (Local)" }
     ]
-    }
   },
   "routes": {
     "esm": true,
@@ -55,5 +41,5 @@
     "middleware": "express",
     "iocModule": "./src/configs/ioc.config.ts",
     "authenticationModule": "src/middlewares/authentication.middleware.ts"
-    }
+  }
 }
