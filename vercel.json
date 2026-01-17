@@ -4,7 +4,8 @@
     {
       "src": "server/src/app.ts",
       "use": "@vercel/node",
-      "config": { "includeFiles": ["server/src/**"] }
+      "config": { "includeFiles": ["server/src/**"] },
+      "buildCommand": "tsoa routes && tsc && tsc-esm-fix --target='dist'"
     }
   ],
   "rewrites": [
