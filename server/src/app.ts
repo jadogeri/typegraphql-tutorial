@@ -42,19 +42,19 @@ export const buildApp = (): Application => {
     res.json({ message: 'put received successfully' });
   });
 
-// Use a specific version (e.g., 5.0.0) and include the full path
-const SWAGGER_CDN_BASE = "https://cdnjs.cloudflare.com";
+  // CDN URLs for Swagger UI (using version 5.x for modern compatibility)
+  const SWAGGER_CDN_BASE = "https://cdnjs.cloudflare.com";
 
-app.use(["/openapi", "/docs", "/swagger"],
-  swaggerUI.serve,
-  swaggerUI.setup(swaggerJson, {
-    customCssUrl: `${SWAGGER_CDN_BASE}/swagger-ui.min.css`,
-    customJs: [
-      `${SWAGGER_CDN_BASE}/swagger-ui-bundle.min.js`,
-      `${SWAGGER_CDN_BASE}/swagger-ui-standalone-preset.min.js`
-    ]
-  })
-);
+  app.use(["/openapi", "/docs", "/swagger"],
+    swaggerUI.serve,
+    swaggerUI.setup(swaggerJson, {
+      customCssUrl: `${SWAGGER_CDN_BASE}/swagger-ui.min.css`,
+      customJs: [
+        `${SWAGGER_CDN_BASE}/swagger-ui-bundle.min.js`,
+        `${SWAGGER_CDN_BASE}/swagger-ui-standalone-preset.min.js`
+      ]
+    })
+  );
 
   return app;
 }
