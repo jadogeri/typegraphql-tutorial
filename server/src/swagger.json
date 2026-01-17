@@ -1,0 +1,255 @@
+{
+	"openapi": "3.0.0",
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"Category": {
+				"properties": {
+					"id": {
+						"type": "number",
+						"format": "double"
+					},
+					"name": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"name"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {
+			"jwt": {
+				"type": "http",
+				"scheme": "bearer",
+				"bearerFormat": "JWT",
+				"description": "Enter your bearer token in the format \"Bearer {token}\"",
+				"scopes": {
+					"ADMIN": "Admin privileges",
+					"USER": "User privileges"
+				}
+			}
+		}
+	},
+	"info": {
+		"title": "Ecommerce Project API",
+		"version": "1.0.7",
+		"description": "This is a ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
+		"termsOfService": "http://swagger.io/terms/",
+		"license": {
+			"name": {
+				"name": "MIT License",
+				"url": "opensource.org"
+			}
+		},
+		"contact": {
+			"name": "Joseph Adogeri",
+			"email": "johndoe@gmail.com",
+			"url": "http://example.com"
+		}
+	},
+	"paths": {
+		"/categories": {
+			"get": {
+				"operationId": "GetAllCategories",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/Category"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Category"
+				],
+				"security": [],
+				"parameters": []
+			},
+			"post": {
+				"operationId": "CreateCategory",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Category"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Category"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/categories/{id}": {
+			"get": {
+				"operationId": "GetCategoryById",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"allOf": [
+										{
+											"$ref": "#/components/schemas/Category"
+										}
+									],
+									"nullable": true
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Category"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateCategory",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"allOf": [
+										{
+											"$ref": "#/components/schemas/Category"
+										}
+									],
+									"nullable": true
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Category"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteCategory",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Category"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "http://localhost:3000",
+			"description": "Development server"
+		},
+		{
+			"url": "http://localhost:3000/api/v1",
+			"description": "Test Server"
+		},
+		{
+			"url": "http://prod:3000/api/v1",
+			"description": "Production server"
+		}
+	],
+	"tags": [
+		{
+			"name": "Category",
+			"description": "Operations related to product categories, including creation, retrieval, and updates."
+		},
+		{
+			"name": "Product",
+			"description": "Operations related to product management, including creation, retrieval, and updates."
+		},
+		{
+			"name": "Order",
+			"description": "Operations related to order management, including creation, retrieval, and updates."
+		}
+	]
+}

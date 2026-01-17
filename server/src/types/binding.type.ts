@@ -9,8 +9,10 @@ export const TYPES = {
 
     //services
     CategoryServiceInterface: Symbol.for("CategoryServiceInterface"),
-    //repositories
+    DatabaseServiceInterface: Symbol.for("DatabaseServiceInterface"),
 
+
+    //repositories
     CategoryRepositoryInterface: Symbol.for("CategoryRepositoryInterface"),
 
 

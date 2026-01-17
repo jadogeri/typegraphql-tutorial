@@ -1,19 +1,36 @@
 "reflect-metadata";
-import express, { Request, Response } from 'express';
-import { AppDataSource } from './configs/typeOrm.config.js';
-import { connect } from './dataSourceConnector.js';
+import express, { Request, Response, Application } from 'express';
+import { RegisterRoutes } from "./routes";
+import * as swaggerJson from "./swagger.json";
+import * as swaggerUI from "swagger-ui-express";
+import cors from 'cors';
+import { corsOptions } from './configs/cors.config';
 
-const app = express();
+
+// importing controllers to ensure they are registered
+import "./controllers/category.controller";
+
+import { bootstrap } from './bootstrap';
 
 
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+export const buildApp = () : Application  =>{
 
-await connect(AppDataSource); // Ensure database connection is established
+  const app: Application = express();
 
-// Define a basic route
-app.get('/home', (req: Request, res: Response) => {
+  //middlewares
+  app.use(express.json())
+  app.use(express.urlencoded({ extended: true }));
+
+  // Use the configured CORS middleware
+  app.use(cors(corsOptions));
+  // Enable pre-flight requests for all routes (necessary when using specific headers/methods)
+  //app.options('*', cors(corsOptions) as any); 
+
+
+  RegisterRoutes(app);
+
+  app.get('/home', (req: Request, res: Response) => {
   res.send('Hello World with TypeScript and Express!');
 });
 
@@ -34,4 +51,21 @@ app.put('/', (req: Request, res: Response) => {
   res.json({ message: 'put  received successfully'});  
 });
 
-export default app;
+  
+app.use(["/openapi", "/docs", "/swagger"], swaggerUI.serve, swaggerUI.setup(swaggerJson));
+
+
+  return app;
+    
+}
+
+if(process.env.NODE_ENV === 'production'){
+  console.log("value of NODE_ENV", process.env.NODE_ENV);
+  console.log("⚙️  Building app in production mode");  
+  await bootstrap();
+}
+
+
+export default buildApp();
+
+
