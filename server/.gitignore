@@ -29,7 +29,9 @@ yarn-error.log*
 # Environment Variables
 .env
 
-
+# Database
+/database.sqlite
+devDb.sqlite
 
 .early.coverage
 
