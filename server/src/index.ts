@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import dotenv from "dotenv";
-import { buildApp } from "./app";
-import { bootstrap } from "./bootstrap";
+import { buildApp } from "./app.js";
+import { bootstrap } from "./bootstrap.js";
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 

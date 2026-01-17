@@ -1,4 +1,4 @@
-import { Category } from "../entities/category.entity";
+import { Category } from "../entities/category.entity.js";
 
 export interface CategoryServiceInterface {
     getAllCategories(): Promise<Category[]>;

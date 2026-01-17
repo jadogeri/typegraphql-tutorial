@@ -1,7 +1,7 @@
 import { DataSource } from "typeorm";
-import { DatabaseServiceInterface } from "../interfaces/database-service.interface";
-import { Service } from "../decorators";
-import { AppDataSource } from "../configs/typeOrm.config";
+import { DatabaseServiceInterface } from "../interfaces/database-service.interface.js";
+import { Service } from "../decorators.js";
+import { AppDataSource } from "../configs/typeOrm.config.js";
 
 @Service()
 export class SQLiteService implements DatabaseServiceInterface{

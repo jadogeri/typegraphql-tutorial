@@ -1,12 +1,12 @@
 
 import { Request, Controller as BaseController, Body, Delete, Get, Post, Put, Route, Tags, Response, Path, Example, SuccessResponse, Res, TsoaResponse, Security, NoSecurity, Patch} from "tsoa";
-import { AutoWired, Controller, Middleware } from "../decorators";
+import { AutoWired, Controller, Middleware } from "../decorators.js";
 import { Request as ExpressRequest,Response as ExpressResponse } from "express";
 
-import { TYPES } from "../types/binding.type";
-import { CategoryServiceInterface } from "../interfaces/category-service.interface";
-import { CategoryControllerInterface } from "../interfaces/category-controller.interface";
-import { Category } from "../entities/category.entity";
+import { TYPES } from "../types/binding.type.js";
+import { CategoryServiceInterface } from "../interfaces/category-service.interface.js";
+import { CategoryControllerInterface } from "../interfaces/category-controller.interface.js";
+import { Category } from "../entities/category.entity.js";
 
 
 

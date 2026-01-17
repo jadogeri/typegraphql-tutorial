@@ -1,5 +1,5 @@
 import { Repository } from "typeorm";
-import { Category } from "../entities/category.entity";
+import { Category } from "../entities/category.entity.js";
 
 export interface CustomCategoryRepositoryInterface {
     getAll(): Promise<Category[]>;

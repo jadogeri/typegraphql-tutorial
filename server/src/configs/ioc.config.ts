@@ -3,15 +3,15 @@ import { Container, decorate, injectable } from 'inversify';
 import { DataSource } from 'typeorm';
 import { Controller } from 'tsoa';
 import { buildProviderModule } from "inversify-binding-decorators";
-import { TYPES } from '../types/binding.type';
-import { CategoryControllerInterface } from '../interfaces/category-controller.interface';
-import { CategoryServiceInterface } from '../interfaces/category-service.interface';
-import { CategoryRepositoryInterface } from '../interfaces/category-repository.interface';
-import { CategoryController } from '../controllers/category.controller';
-import { CategoryService } from '../services/category.service';
-import { CategoryRepository } from '../repositories/category.repository';
-import { DatabaseServiceInterface } from '../interfaces/database-service.interface';
-import { SQLiteService } from '../services/sqlite.service';
+import { TYPES } from '../types/binding.type.js';
+import { CategoryControllerInterface } from '../interfaces/category-controller.interface.js';
+import { CategoryServiceInterface } from '../interfaces/category-service.interface.js';
+import { CategoryRepositoryInterface } from '../interfaces/category-repository.interface.js';
+import { CategoryController } from '../controllers/category.controller.js';
+import { CategoryService } from '../services/category.service.js';
+import { CategoryRepository } from '../repositories/category.repository.js';
+import { DatabaseServiceInterface } from '../interfaces/database-service.interface.js';
+import { SQLiteService } from '../services/sqlite.service.js';
 
 
 const iocContainer = new Container();

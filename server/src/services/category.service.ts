@@ -1,7 +1,7 @@
-import { AutoWired, Service } from "../decorators";
-import { CategoryRepositoryInterface } from "../interfaces/category-repository.interface";
-import { CategoryServiceInterface } from "../interfaces/category-service.interface";
-import { TYPES } from "../types/binding.type";
+import { AutoWired, Service } from "../decorators.js";
+import { CategoryRepositoryInterface } from "../interfaces/category-repository.interface.js";
+import { CategoryServiceInterface } from "../interfaces/category-service.interface.js";
+import { TYPES } from "../types/binding.type.js";
 
 
 @Service()

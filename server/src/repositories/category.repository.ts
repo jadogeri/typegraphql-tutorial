@@ -1,9 +1,9 @@
 import { DataSource, Repository as BaseRepository } from "typeorm";
-import { Repository } from "../decorators";
+import { Repository } from "../decorators.js";
 import { inject } from "inversify";
-import { TYPES } from "../types/binding.type";
-import { Category } from "../entities/category.entity";
-import { CategoryRepositoryInterface } from "../interfaces/category-repository.interface";
+import { TYPES } from "../types/binding.type.js";
+import { Category } from "../entities/category.entity.js";
+import { CategoryRepositoryInterface } from "../interfaces/category-repository.interface.js";
 
     
 @Repository()

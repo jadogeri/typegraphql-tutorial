@@ -1,8 +1,8 @@
 import "reflect-metadata";
 import * as dotenv from "dotenv";
 dotenv.config();
-import { bindDataSource, iocContainer } from "./configs/ioc.config";
-import { SQLiteService } from './services/sqlite.service';
+import { bindDataSource, iocContainer } from "./configs/ioc.config.js";
+import { SQLiteService } from './services/sqlite.service.js';
 import { DataSource } from "typeorm";
   
 

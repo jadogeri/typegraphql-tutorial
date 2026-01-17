@@ -33,7 +33,8 @@
     "migration:generate": "npx tsx ./node_modules/typeorm/cli.js migration:generate ./src/migrations/InitialSchemaSetup --dataSource ./src/configs/typeOrm.config.ts --pretty",
     "migration:run": "npx tsx ./node_modules/typeorm/cli.js migration:run --dataSource ./src/configs/typeOrm.config.ts",
     "migration:revert": "npx typeorm-ts-node-commonjs migration:revert --dataSource ./src/configs/typeOrm.config.ts",
-    "swagger:generate": "tsoa spec-and-routes"
+    "swagger:generate": "tsoa spec-and-routes",
+    "src:generate": "npx tsc-esm-fix --src='server/src/**/*' --ext='.js'"
   },
   "dependencies": {
     "@faker-js/faker": "^10.2.0",
