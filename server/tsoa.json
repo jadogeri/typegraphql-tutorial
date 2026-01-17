@@ -5,20 +5,6 @@
   "spec": {
     "outputDirectory": "src",
     "specVersion": 3,
-    "securityDefinitions": {
-      "jwt": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT",
-        "description": "Enter your bearer token in the format \"Bearer {token}\"",
-        "scopes": {
-          "ADMIN": "Admin privileges",
-          "USER": "User privileges"
-
-        }
-      }    
-
-    },
     "name": "Ecommerce API",
     "description": "This is a sample Ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
     "version": "1.0.7",

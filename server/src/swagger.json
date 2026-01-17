@@ -25,28 +25,23 @@
 				"additionalProperties": false
 			}
 		},
-		"securitySchemes": {
-			"jwt": {
-				"type": "http",
-				"scheme": "bearer",
-				"bearerFormat": "JWT",
-				"description": "Enter your bearer token in the format \"Bearer {token}\"",
-				"scopes": {
-					"ADMIN": "Admin privileges",
-					"USER": "User privileges"
-				}
-			}
-		}
+		"securitySchemes": {}
 	},
 	"info": {
-		"title": "Ecommerce Project API",
+		"title": "Ecommerce API",
 		"version": "1.0.7",
-		"description": "Ecommerce server API documentation.",
+		"description": "This is a sample Ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
+		"termsOfService": "http://swagger.io/terms/",
 		"license": {
-			"name": "MIT"
+			"name": {
+				"name": "MIT License",
+				"url": "opensource.org"
+			}
 		},
 		"contact": {
-			"name": "Joseph Adogeri"
+			"name": "Joseph Adogeri",
+			"email": "johndoe@gmail.com",
+			"url": "http://example.com"
 		}
 	},
 	"paths": {
@@ -97,9 +92,7 @@
 					"required": true,
 					"content": {
 						"application/json": {
-							"schema": {
-								"type": "string"
-							}
+							"schema": {}
 						}
 					}
 				}
@@ -179,9 +172,7 @@
 					"required": true,
 					"content": {
 						"application/json": {
-							"schema": {
-								"type": "string"
-							}
+							"schema": {}
 						}
 					}
 				}
@@ -220,27 +211,30 @@
 	},
 	"servers": [
 		{
-			"url": "https://[object Object]/"
+			"url": "https://typegraphql-tutorial.vercel.app",
+			"description": "Production Server"
 		},
 		{
-			"url": "https://[object Object]/"
+			"url": "https://test-api.vercel.app",
+			"description": "Test/Staging Server"
 		},
 		{
-			"url": "https://[object Object]/"
+			"url": "http://localhost:3000",
+			"description": "Development Server (Local)"
 		}
 	],
 	"tags": [
 		{
 			"name": "Category",
-			"description": "Category operations"
-		},
-		{
-			"name": "Product",
-			"description": "Product management"
+			"description": "Operations related to categories."
 		},
 		{
 			"name": "Order",
-			"description": "Order management"
+			"description": "Operations related to orders."
+		},
+		{
+			"name": "Region",
+			"description": "Operations related to regions."
 		}
 	]
 }

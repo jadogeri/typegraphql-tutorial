@@ -113,7 +113,7 @@ export function RegisterRoutes(app: Router) {
         });
         // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
         const argsCategoryController_createCategory: Record<string, TsoaRoute.ParameterSchema> = {
-                name: {"in":"body","name":"name","required":true,"dataType":"string"},
+                name: {"in":"body","name":"name","required":true,"dataType":"any"},
         };
         app.post('/categories',
             ...(fetchMiddlewares<RequestHandler>(CategoryController)),
@@ -149,7 +149,7 @@ export function RegisterRoutes(app: Router) {
         // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
         const argsCategoryController_updateCategory: Record<string, TsoaRoute.ParameterSchema> = {
                 id: {"in":"path","name":"id","required":true,"dataType":"double"},
-                name: {"in":"body","name":"name","required":true,"dataType":"string"},
+                name: {"in":"body","name":"name","required":true,"dataType":"any"},
         };
         app.patch('/categories/:id',
             ...(fetchMiddlewares<RequestHandler>(CategoryController)),
