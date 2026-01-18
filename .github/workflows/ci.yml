@@ -28,7 +28,8 @@ jobs:
           cache-dependency-path: 'server/package-lock.json'
 
       - name: Install Dependencies
-        run: npm install --force
+        # Added --legacy-peer-deps here
+        run: npm install --force --legacy-peer-deps
         env:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
@@ -40,16 +41,15 @@ jobs:
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: production
 
-      # FIXED STEP: Only install the libSQL alias and the types. 
-      # Removed 'npm install sqlite3 --force' which was causing the 404 error.
-      # - name: Install libSQL Driver Alias
-      #   run: | 
-      #     npm install sqlite3@npm:@libsql/sqlite3 --force
-      #     npm install @types/sqlite3 --force
-      #   env:
-      #     TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
-      #     TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
-      #     NODE_ENV: production
+      - name: Install libSQL Driver Alias
+        # Added --legacy-peer-deps to both install commands
+        run: | 
+          npm install sqlite3@npm:@libsql/sqlite3 --force --legacy-peer-deps
+          npm install @types/sqlite3 --force --legacy-peer-deps
+        env:
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          NODE_ENV: production
 
       - name: Run Database Migrations
         run: |
@@ -66,7 +66,6 @@ jobs:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: test
-
 
       - name: Check The Environment Variable
         run: echo "NODE_ENV is $NODE_ENV"

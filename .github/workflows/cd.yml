@@ -23,7 +23,14 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-      # ADD THIS STEP: This creates the ".vercel/output" folder
+      # STEP 1: Set npm config so Vercel build honors legacy-peer-deps
+      - name: Configure npm legacy peer deps
+        run: npm config set legacy-peer-deps true
+
+      # STEP 2: Install local dependencies for the runner (optional but recommended)
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
         env:
