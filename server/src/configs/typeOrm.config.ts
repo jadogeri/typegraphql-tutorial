@@ -45,21 +45,25 @@ console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 
 
 const buildDatasource = (): DataSource => {
-  const databaseUrl = `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`
-  console.log("Constructed database URL:", databaseUrl);
-  
+const databaseUrl = `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`
+console.log("Constructed database URL:", databaseUrl);
+
 
 const prodOptions: DataSourceOptions & SeederOptions = { 
-    type: "sqlite",
-    database: `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`,
-    driver: libsqlDriver,
-    flags: 0x00000040 , 
-    synchronize: false, 
+  type: "sqlite",
+  database: `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`,
+  driver: libsqlDriver,
+  flags: 0x00000040 , 
+  synchronize: false, 
+  extra: {
+    flags: 0x00000040,
+    authToken: process.env.TURSO_AUTH_TOKEN, 
+  },
 
-    logging: false,
-    entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
-    migrations: ["src/migrations/**/*.ts"],
-    subscribers: [],
+  logging: false,
+  entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
+  migrations: ["src/migrations/**/*.ts"],
+  subscribers: [],
 };
 
 const devOptions: DataSourceOptions & SeederOptions = {
