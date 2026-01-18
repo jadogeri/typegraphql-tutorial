@@ -16,12 +16,13 @@ import { Invoice } from "../entities/invoice.entity.js";
 import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
 import * as libsql from "@libsql/sqlite3";
+import { getSanitizedTursoUrl } from "../utils/get-turso-url.util.js";
 
 import * as dotenv from "dotenv";
 dotenv.config();
 
 const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
-const TURSO_DATABASE_URL = process.env.TURSO_DATABASE_URL;
+const TURSO_DATABASE_URL = getSanitizedTursoUrl(process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
 console.log("TURSO_AUTH_TOKEN:", TURSO_AUTH_TOKEN);
 console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 
