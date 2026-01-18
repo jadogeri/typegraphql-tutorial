@@ -7,6 +7,7 @@ import * as swaggerUI from "swagger-ui-express";
 import cors from 'cors';
 import { corsOptions } from './configs/cors.config.js';
 
+
 import { bootstrap } from './bootstrap.js';
 
 export const buildApp = (): Application => {
