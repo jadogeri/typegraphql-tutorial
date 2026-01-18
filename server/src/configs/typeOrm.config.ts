@@ -17,9 +17,18 @@ import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
 import * as libsql from "@libsql/sqlite3";
 import { getSanitizedTursoUrl } from "../utils/get-turso-url.util.js";
+import { createClient } from "@libsql/client";
+
 
 import * as dotenv from "dotenv";
 dotenv.config();
+
+
+const customTursoClient = createClient({
+  url: process.env.TURSO_DATABASE_URL!,
+  authToken: process.env.TURSO_AUTH_TOKEN,
+});
+
 
 const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
 const TURSO_DATABASE_URL = getSanitizedTursoUrl(process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
@@ -43,14 +52,16 @@ import LibsqlDriver from "@libsql/sqlite3"; // Default import for ESM
 const prodOptions: DataSourceOptions & SeederOptions = { 
     type: "sqlite",
     // Pass the imported driver directly
-    driver: LibsqlDriver, 
-    database: `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`,
-    flags: 0x00000040,  
+    driver: customTursoClient as any, 
+    // database: `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`,
+    database: "typegraphqldb",
+
     synchronize: true, 
     logging: false,
     entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
     migrations: [],
     subscribers: [],
+
 };
 
 
