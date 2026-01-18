@@ -20,7 +20,7 @@ export class CategoryService implements CategoryServiceInterface{
         return await this.categoryRepository.find();
     }
     async getCategoryById(id: number): Promise<any> {
-        return await this.categoryRepository.find();
+        return { id, name: "Sample Category" }
     }
     async deleteCategory(id: number): Promise<any> {
         return await this.categoryRepository.find();
