@@ -1,6 +1,5 @@
 "reflect-metadata";
 import "./controllers/category.controller.js";
-
 import express, { Request, Response, Application } from 'express';
 import { RegisterRoutes } from "./routes.js";
 import * as swaggerJson from "./swagger.json" with { type: 'json' };

@@ -46,13 +46,13 @@ jobs:
       - name: Install libSQL Driver and Alias
         run: |
           # Explicitly alias sqlite3 to the libSQL implementation
-          npm install sqlite3@npm:@libsql/sqlite3 --force
+          npm install sqlite3@npm:@libsql/sqlite3 --force --legacy-peer-deps
           
           # Ensure types are available for the aliased package
-          npm install @types/sqlite3 --save-dev
+          npm install @types/sqlite3 --save-dev --force --legacy-peer-deps
           
           # Ensure the core libSQL client is on the latest version to match server protocols
-          npm install @libsql/client@latest
+          npm install @libsql/client@latest --force --legacy-peer-deps
 
 
         env:
