@@ -29,7 +29,7 @@ jobs:
           cache-dependency-path: 'server/package-lock.json'
 
       - name: Install Dependencies
-        run: npm install --force
+        run: npm install --legacy-peer-deps
         env:
           # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
@@ -42,11 +42,9 @@ jobs:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: production
-      - name: Install Sqlite Alias
-        run: | 
-          npm install sqlite3@npm:@libsql/sqlite3  --force
-          npm install sqlite3 --force
-          npm install @types/sqlite3 --force
+
+      - name: Install libSQL as SQLite Alias
+        run: npm install sqlite3@npm:@libsql/sqlite3 --legacy-peer-deps
 
         env:
           # Mapping the inherited secrets to the environment
