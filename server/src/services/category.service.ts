@@ -11,18 +11,20 @@ export class CategoryService implements CategoryServiceInterface{
     private readonly categoryRepository!:  CategoryRepositoryInterface;    
 
     async createCategory(name: string): Promise<any> {
-        return await this.categoryRepository.find();
+        return await this.categoryRepository.find({});
     }
     async getAllCategories(): Promise<any> {
-        return await this.categoryRepository.find();
+        return await this.categoryRepository.find({});
     }
     async updateCategory(id: number, name: string): Promise<any> {
-        return await this.categoryRepository.find();
+        return await this.categoryRepository.find({});
     }
     async getCategoryById(id: number): Promise<any> {
+        console.log("is repository initialized:", this.categoryRepository !== undefined)
+        
         return { id, name: "Sample Category" }
     }
     async deleteCategory(id: number): Promise<any> {
-        return await this.categoryRepository.find();
+        return await this.categoryRepository.find({});
     }
 }

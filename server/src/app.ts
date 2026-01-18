@@ -9,6 +9,7 @@ import { corsOptions } from './configs/cors.config.js';
 
 
 import { bootstrap } from './bootstrap.js';
+import { configureIoC } from "./configs/ioc.config.js";
 
 export const buildApp = (): Application => {
 
@@ -61,6 +62,8 @@ export const buildApp = (): Application => {
 if (process.env.NODE_ENV === 'production') {
   console.log("value of NODE_ENV", process.env.NODE_ENV);
   console.log("⚙️  Building app in production mode");
+  configureIoC();
+
   await bootstrap();
 }
 
