@@ -43,13 +43,10 @@ import LibsqlDriver from "@libsql/sqlite3"; // Default import for ESM
 
 const prodOptions: DataSourceOptions & SeederOptions = { 
     type: "sqlite",
-    database: process.env.TURSO_DATABASE_URL, // Use the Turso URL
-    extra: {
-        authToken: process.env.TURSO_AUTH_TOKEN, // Your Turso token
-    },
-    flags: 0x00000040 , // required for TypeORM with libsql
+    database: TURSO_DATABASE_URL + "?authToken=" + TURSO_AUTH_TOKEN,
+    //flags: 0x00000040 , // required for TypeORM with libsql
     driver: LibsqlDriver, // Use the default import for ESM
-    synchronize: true, 
+    synchronize: false, 
     logging: false,
     entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
     migrations: [],
