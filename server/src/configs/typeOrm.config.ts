@@ -15,7 +15,7 @@ import { Order } from "../entities/order.entity.js";
 import { Invoice } from "../entities/invoice.entity.js";
 import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
-import libsql from "@libsql/sqlite3";
+import * as libsql from "@libsql/sqlite3";
 
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -37,20 +37,25 @@ console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 //   subscribers: [],  
 // }
 
-const prodOptions: DataSourceOptions & SeederOptions = {
-  type: "sqlite",
-  driver: libsql,
-  // The 0x00000040 flag is strictly required for Turso/TypeORM compatibility
-  flags: 0x00000040, 
-  // Use the clean URL without manually appending the token string
-  database: process.env.TURSO_DATABASE_URL, 
-  synchronize: false,
-  logging: false,
-  entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice],
-  extra: {
-    // Pass the token here instead of in the URL string
-    authToken: process.env.TURSO_AUTH_TOKEN, 
-  },
+import LibsqlDriver from "@libsql/sqlite3"; // Default import for ESM
+
+const prodOptions: DataSourceOptions & SeederOptions = { 
+    type: "sqlite",
+    // Pass the imported driver directly
+    driver: LibsqlDriver, 
+    database: process.env.TURSO_DATABASE_URL,
+    // Note: TypeORM's 'sqlite' options do not have a native 'auth_token' key.
+    // Turso authentication is typically handled by including the token 
+    // in the database URL (e.g., libsql://db-name.turso.io?authToken=TOKEN)
+    extra: {
+      authToken: process.env.TURSO_AUTH_TOKEN
+    },
+    flags: 0x00000040, 
+    synchronize: true, 
+    logging: false,
+    entities: ["src/entity/**/*.ts"], 
+    migrations: [],
+    subscribers: [],
 };
 
 

@@ -21,7 +21,11 @@ export const bootstrap = async () : Promise<void> => {
 
   } catch (error: any) {
     if (error instanceof Error) {
-        console.error("❌ Database connection failed:", error.message);
+        console.error("❌ Database connection failed:");
+        console.error(" Error:", error.name);
+        console.error(" message:", error.message);
+        console.error(" stack trace:", error.stack);
+        console.error(" Cause of error :", error?.cause);
         process.exit(1);
     } else {
         console.error("❌ unknown error:", error);
