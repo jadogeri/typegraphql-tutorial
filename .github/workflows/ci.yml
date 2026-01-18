@@ -42,14 +42,14 @@ jobs:
 
       # FIXED STEP: Only install the libSQL alias and the types. 
       # Removed 'npm install sqlite3 --force' which was causing the 404 error.
-      - name: Install libSQL Driver Alias
-        run: | 
-          npm install sqlite3@npm:@libsql/sqlite3 --force
-          npm install @types/sqlite3 --force
-        env:
-          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
-          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
-          NODE_ENV: production
+      # - name: Install libSQL Driver Alias
+      #   run: | 
+      #     npm install sqlite3@npm:@libsql/sqlite3 --force
+      #     npm install @types/sqlite3 --force
+      #   env:
+      #     TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+      #     TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+      #     NODE_ENV: production
 
       - name: Run Database Migrations
         run: |

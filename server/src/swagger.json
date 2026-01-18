@@ -25,17 +25,23 @@
 				"additionalProperties": false
 			}
 		},
-		"securitySchemes": {}
+		"securitySchemes": {
+			"jwt": {
+				"type": "http",
+				"scheme": "bearer",
+				"bearerFormat": "JWT"
+			}
+		}
 	},
 	"info": {
 		"title": "Ecommerce API",
 		"version": "1.0.7",
-		"description": "This is a sample Ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
-		"termsOfService": "http://swagger.io/terms/",
+		"description": "This is a sample Ecommerce server.",
+		"termsOfService": "http://swagger.io",
 		"license": {
 			"name": {
 				"name": "MIT License",
-				"url": "opensource.org"
+				"url": "https://opensource.org"
 			}
 		},
 		"contact": {
@@ -211,16 +217,10 @@
 	},
 	"servers": [
 		{
-			"url": "https://typegraphql-tutorial.vercel.app",
-			"description": "Production Server"
+			"url": "https://[object Object]/"
 		},
 		{
-			"url": "https://test-api.vercel.app",
-			"description": "Test/Staging Server"
-		},
-		{
-			"url": "http://localhost:3000",
-			"description": "Development Server (Local)"
+			"url": "https://[object Object]/"
 		}
 	],
 	"tags": [
