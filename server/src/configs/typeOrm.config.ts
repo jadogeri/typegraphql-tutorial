@@ -57,7 +57,7 @@ const prodOptions: DataSourceOptions & SeederOptions = {
   synchronize: false, 
   extra: {
     flags: 0x00000040,
-    authToken: process.env.TURSO_AUTH_TOKEN, 
+    authToken: TURSO_AUTH_TOKEN, 
   },
 
   logging: false,
