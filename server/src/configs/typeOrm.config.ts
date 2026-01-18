@@ -25,17 +25,34 @@ const TURSO_DATABASE_URL = process.env.TURSO_DATABASE_URL;
 console.log("TURSO_AUTH_TOKEN:", TURSO_AUTH_TOKEN);
 console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 
+// const prodOptions: DataSourceOptions & SeederOptions = {
+//   type:  "sqlite" , // or "mysql", "sqlite", etc.
+//    driver: libsql, // Use the imported module directly
+//   flags: 0x00000040 , // required for TypeORM with libsql
+//   database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
+//   synchronize: false,
+//   logging: false,
+//   entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
+//   migrations: ["src/migrations/**/*.ts"],
+//   subscribers: [],  
+// }
+
 const prodOptions: DataSourceOptions & SeederOptions = {
-  type:  "sqlite" , // or "mysql", "sqlite", etc.
-   driver: libsql, // Use the imported module directly
-  flags: 0x00000040 , // required for TypeORM with libsql
-  database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
+  type: "sqlite",
+  driver: libsql,
+  // The 0x00000040 flag is strictly required for Turso/TypeORM compatibility
+  flags: 0x00000040, 
+  // Use the clean URL without manually appending the token string
+  database: process.env.TURSO_DATABASE_URL, 
   synchronize: false,
   logging: false,
-  entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
-  migrations: ["src/migrations/**/*.ts"],
-  subscribers: [],  
-}
+  entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice],
+  extra: {
+    // Pass the token here instead of in the URL string
+    authToken: process.env.TURSO_AUTH_TOKEN, 
+  },
+};
+
 
 const devOptions: DataSourceOptions & SeederOptions = {
   type: "better-sqlite3",
