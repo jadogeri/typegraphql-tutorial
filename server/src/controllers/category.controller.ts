@@ -19,27 +19,72 @@ export class CategoryController extends BaseController implements CategoryContro
   private readonly categoryService!: CategoryServiceInterface;
     
   @Get("/")
-  getAllCategories(): Promise<Category[]> {
-    return this.categoryService.getAllCategories();
+  async getAllCategories(): Promise<Category[]> {
+    try {
+      return await this.categoryService.getAllCategories();
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error("Error fetching all categories:", error.message);
+      } else {
+        console.error("unknown error fetching all categories:", error);
+      }
+      throw error;
+    }     
   }
   @Get("/{id}")
-  getCategoryById(@Path() id: number): Promise<Category | null> {
-    return this.categoryService.getCategoryById(id);
+  async getCategoryById(@Path() id: number): Promise<Category | null> {
+    try {
+      return await this.categoryService.getCategoryById(id);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(`Error fetching category with ID ${id}:`, error.message);
+      } else {
+        console.error(`unknown error fetching category with ID ${id}:`, error);
+      }
+      throw error;
+    }
   }
 
   
   @Post("/")
-  createCategory(@Body() name: any): Promise<Category> {
-    return this.categoryService.createCategory(name);
+  async createCategory(@Body() name: any): Promise<Category> {
+    try {
+      return await this.categoryService.createCategory(name);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error("Error creating category:", error.message);
+      } else {
+        console.error("unknown error creating category:", error);
+      }
+      throw error;
+    }
   }
 
   @Patch("/{id}")
-  updateCategory(@Path() id: number, @Body() name: any): Promise<Category | null> {
-    return this.categoryService.updateCategory(id, name);
+  async updateCategory(@Path() id: number, @Body() name: any): Promise<Category | null> {
+    try {
+      return await this.categoryService.updateCategory(id, name);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(`Error updating category with ID ${id}:`, error.message);
+      } else {
+        console.error(`unknown error updating category with ID ${id}:`, error);
+      } 
+      throw error;
+    }
   }
   @Delete("/{id}")
-  deleteCategory(@Path() id: number): Promise<boolean> {
-    return this.categoryService.deleteCategory(id);
+  async deleteCategory(@Path() id: number): Promise<boolean> {
+    try {
+      return await this.categoryService.deleteCategory(id);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(`Error deleting category with ID ${id}:`, error.message);
+      } else {
+        console.error(`unknown error deleting category with ID ${id}:`, error);
+      }
+      throw error;
+    }
   }
     
 }
