@@ -43,14 +43,8 @@ const prodOptions: DataSourceOptions & SeederOptions = {
     type: "sqlite",
     // Pass the imported driver directly
     driver: LibsqlDriver, 
-    database: process.env.TURSO_DATABASE_URL,
-    // Note: TypeORM's 'sqlite' options do not have a native 'auth_token' key.
-    // Turso authentication is typically handled by including the token 
-    // in the database URL (e.g., libsql://db-name.turso.io?authToken=TOKEN)
-    extra: {
-      authToken: process.env.TURSO_AUTH_TOKEN
-    },
-    flags: 0x00000040, 
+    database: `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`,
+    flags: 0x00000040,  
     synchronize: true, 
     logging: false,
     entities: ["src/entity/**/*.ts"], 
