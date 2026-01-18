@@ -23,7 +23,8 @@ export const buildApp = (): Application => {
 
   app.get('/home', (req: Request, res: Response) => {
     res.send('Hello World with TypeScript and Express!');
-  });  
+  });
+    
 
   app.get('/', (req: Request, res: Response) => {
     res.json({ message: 'get received successfully' });
