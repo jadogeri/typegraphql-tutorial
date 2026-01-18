@@ -47,7 +47,7 @@ const prodOptions: DataSourceOptions & SeederOptions = {
     flags: 0x00000040,  
     synchronize: true, 
     logging: false,
-    entities: ["src/entity/**/*.ts"], 
+    entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
     migrations: [],
     subscribers: [],
 };
