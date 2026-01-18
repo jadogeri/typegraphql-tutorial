@@ -23,7 +23,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
-const TURSO_DATABASE_URL = getSanitizedTursoUrl(process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
+const TURSO_DATABASE_URL = (process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
 console.log("TURSO_AUTH_TOKEN:", TURSO_AUTH_TOKEN);
 console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 
@@ -43,9 +43,12 @@ import LibsqlDriver from "@libsql/sqlite3"; // Default import for ESM
 
 const prodOptions: DataSourceOptions & SeederOptions = { 
     type: "sqlite",
+    database: process.env.TURSO_DATABASE_URL, // Use the Turso URL
+    extra: {
+        authToken: process.env.TURSO_AUTH_TOKEN, // Your Turso token
+    },
+    flags: 0x00000040 , // required for TypeORM with libsql
     driver: LibsqlDriver, // Use the default import for ESM
-    flags: 0x00000040, // this is required to make it work in TypeORM
-    database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
     synchronize: true, 
     logging: false,
     entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
