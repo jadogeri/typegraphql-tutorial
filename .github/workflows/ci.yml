@@ -42,18 +42,11 @@ jobs:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: production
-
-      - name: Install libSQL Driver and Alias
-        run: |
-          # Explicitly alias sqlite3 to the libSQL implementation
-          npm install sqlite3@npm:@libsql/sqlite3 --force --legacy-peer-deps
-          
-          # Ensure types are available for the aliased package
-          npm install @types/sqlite3 --save-dev --force --legacy-peer-deps
-          
-          # Ensure the core libSQL client is on the latest version to match server protocols
-          npm install @libsql/client@latest --force --legacy-peer-deps
-
+      - name: Install Sqlite Alias
+        run: | 
+          npm install sqlite3@npm:@libsql/sqlite3  --force
+          npm install sqlite3 --force
+          npm install @types/sqlite3 --force
 
         env:
           # Mapping the inherited secrets to the environment
