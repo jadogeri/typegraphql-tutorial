@@ -5,7 +5,6 @@ on:
       node-version:
         type: string
         default: '20.x'
-    # Important: Re-add the secret declarations here so the runner knows to expect them
     secrets:
       TURSO_DATABASE_URL: { required: true }
       TURSO_AUTH_TOKEN: { required: true }  
@@ -31,34 +30,31 @@ jobs:
       - name: Install Dependencies
         run: npm install --force
         env:
-          # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
       - name: Build Project
         run: npm run build --if-present
         env:
-          # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: production
-      - name: Install Sqlite Alias
-        run: | 
-          npm install sqlite3@npm:@libsql/sqlite3  --force
-          npm install sqlite3 --force
-          npm install @types/sqlite3 --force
 
+      # FIXED STEP: Only install the libSQL alias and the types. 
+      # Removed 'npm install sqlite3 --force' which was causing the 404 error.
+      - name: Install libSQL Driver Alias
+        run: | 
+          npm install sqlite3@npm:@libsql/sqlite3 --force
+          npm install @types/sqlite3 --force
         env:
-          # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: production
+
       - name: Run Database Migrations
-        # TypeORM will automatically pick up the env variables from the job level
         run: |
-          npm run migration:generate && echo "Migrations applied successfully."
-          npm run migration:run && echo "Migrations completed successfully."
-          echo "Node Environment: $NODE_ENV"  
+          npm run migration:generate -- -n MigrationName || echo "No changes detected"
+          npm run migration:run
         env:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
@@ -67,10 +63,10 @@ jobs:
       - name: Run Tests
         run: npm run test -- --no-cache
         env:
-          # Mapping the inherited secrets to the environment
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           NODE_ENV: test
+
 
       - name: Check The Environment Variable
         run: echo "NODE_ENV is $NODE_ENV"

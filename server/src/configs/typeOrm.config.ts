@@ -15,7 +15,9 @@ import { Order } from "../entities/order.entity.js";
 import { Invoice } from "../entities/invoice.entity.js";
 import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
-import  libsql from "@libsql/sqlite3";
+import { verbose } from "@libsql/sqlite3";
+const libsql = verbose();
+
 import * as dotenv from "dotenv";
 dotenv.config();
 
