@@ -13,6 +13,7 @@ import { bootstrap } from './bootstrap.js';
 export const buildApp = (): Application => {
 
   const app: Application = express();
+  
 
   // middlewares
   app.use(express.json());
