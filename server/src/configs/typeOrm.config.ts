@@ -34,8 +34,7 @@ const prodOptions: DataSourceOptions & SeederOptions = {
   logging: false,
   entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
   migrations: ["src/migrations/**/*.ts"],
-  subscribers: [],
-  
+  subscribers: [],  
 }
 
 const devOptions: DataSourceOptions & SeederOptions = {
