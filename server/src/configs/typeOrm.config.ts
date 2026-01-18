@@ -15,7 +15,7 @@ import { Order } from "../entities/order.entity.js";
 import { Invoice } from "../entities/invoice.entity.js";
 import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
-// import libsql from "@libsql/sqlite3";
+import libsql from "@libsql/sqlite3";
 
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -27,7 +27,7 @@ console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 
 const prodOptions: DataSourceOptions & SeederOptions = {
   type:  "sqlite" , // or "mysql", "sqlite", etc.
-  // driver: libsql, // Use the imported module directly
+   driver: libsql, // Use the imported module directly
   flags: 0x00000040 , // required for TypeORM with libsql
   database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
   synchronize: false,
