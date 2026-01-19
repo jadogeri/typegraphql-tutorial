@@ -268,7 +268,7 @@
 	},
 	"servers": [
 		{
-			"url": "http://localhost:3000/",
+			"url": "http://localhost:3000",
 			"description": "Development server"
 		},
 		{
@@ -276,7 +276,7 @@
 			"description": "Test Server"
 		},
 		{
-			"url": "https://typegraphql-tutorial.vercel.app/",
+			"url": "https://typegraphql-tutorial.vercel.app",
 			"description": "Production server"
 		}
 	],

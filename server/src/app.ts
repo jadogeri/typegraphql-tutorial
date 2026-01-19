@@ -64,7 +64,6 @@ export const buildApp = (): Application => {
     res.sendFile(path.join(__dirname, "swagger.json"));
   });
     
-
   return app;
 }
 
