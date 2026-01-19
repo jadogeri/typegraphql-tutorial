@@ -17,20 +17,23 @@ import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
 import { getSanitizedTursoUrl } from "../utils/get-turso-url.util.js";
 import { createRequire } from "node:module"; // Essential for ESM compatibility
-
-
-
 import * as dotenv from "dotenv";
-import { get } from "node:http";
+import libsqlDriver from "@libsql/sqlite3"
 dotenv.config();
 
-const require = createRequire(import.meta.url);
-const libsqlDriver = require("@libsql/sqlite3");
+// const require = createRequire(import.meta.url);
+// const libsqlDriver = require("@libsql/sqlite3");
 
 const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
 const TURSO_DATABASE_URL = getSanitizedTursoUrl(process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
 console.log("TURSO_AUTH_TOKEN:", TURSO_AUTH_TOKEN);
 console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
+
+if(libsqlDriver) {
+  console.log("libsqlDriver loaded successfully");
+} else {
+  console.error("Failed to load libsqlDriver");
+}
 
 
 const buildDatasource = (): DataSource => {
