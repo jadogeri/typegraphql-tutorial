@@ -8,10 +8,18 @@ import cors from 'cors';
 import { corsOptions } from './configs/cors.config.js';
 
 
+
 import { bootstrap } from './bootstrap.js';
 import { configureIoC } from "./configs/ioc.config.js";
 import { swaggerOptions } from "./configs/swagger.config.js";
 import swaggerMiddleware from "./middlewares/swagger.middleware.js";
+import path, { dirname} from "node:path";
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+console.log("__filename:", __filename);
+const __dirname = dirname(__filename);
+console.log("__dirname:", __dirname);
 
 export const buildApp = (): Application => {
 
@@ -51,7 +59,11 @@ export const buildApp = (): Application => {
   );
 
 
-  app.get("/swagger.json", swaggerMiddleware);
+  // app.get("/swagger.json", swaggerMiddleware);
+  app.get("/swagger.json", (_req, res) => {
+    res.sendFile(path.join(__dirname, "swagger.json"));
+  });
+    
 
   return app;
 }
