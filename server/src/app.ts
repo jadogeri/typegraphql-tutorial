@@ -49,7 +49,7 @@ export const buildApp = (): Application => {
     swaggerUI.serve,
     swaggerUI.setup(swaggerJson, swaggerOptions)
   );
-  
+
 
   app.get("/swagger.json", swaggerMiddleware);
 
