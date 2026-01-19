@@ -12,7 +12,7 @@ const swaggerOptions: SwaggerUiOptions = {
   ],
   swaggerOptions: {
     // Required to tell the UI where your generated JSON lives
-    url: "/swagger.json",   
+    // url: "/swagger.json",   
     deepLinking: true,
   },
   customSiteTitle: "My API Docs",
