@@ -10,7 +10,10 @@
           "server/src/**", 
           "server/src/routes.js", 
           "server/src/swagger.json",
-          "server/node_modules/swagger-ui-dist/**" 
+          "server/node_modules/swagger-ui-dist/**" ,
+          "node_modules/swagger-ui-dist/**",
+          "server/src/middlewares/swagger.middleware.ts"
+
         ] 
       }
     }
