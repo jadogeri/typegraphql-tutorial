@@ -21,6 +21,14 @@ console.log("__filename:", __filename);
 const __dirname = dirname(__filename);
 console.log("__dirname:", __dirname);
 
+
+if (process.env.NODE_ENV === 'production') {
+  console.log("value of NODE_ENV", process.env.NODE_ENV);
+  console.log("⚙️  Building app in production mode");
+  configureIoC();
+
+  await bootstrap();
+}
 export const buildApp = (): Application => {
 
   const app: Application = express();  
@@ -67,12 +75,6 @@ export const buildApp = (): Application => {
   return app;
 }
 
-if (process.env.NODE_ENV === 'production') {
-  console.log("value of NODE_ENV", process.env.NODE_ENV);
-  console.log("⚙️  Building app in production mode");
-  configureIoC();
 
-  await bootstrap();
-}
 
 export default buildApp();
