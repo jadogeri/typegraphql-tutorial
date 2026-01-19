@@ -29,19 +29,24 @@
 			"jwt": {
 				"type": "http",
 				"scheme": "bearer",
-				"bearerFormat": "JWT"
+				"bearerFormat": "JWT",
+				"description": "Enter your bearer token in the format \"Bearer {token}\"",
+				"scopes": {
+					"ADMIN": "Admin privileges",
+					"USER": "User privileges"
+				}
 			}
 		}
 	},
 	"info": {
-		"title": "Ecommerce API",
+		"title": "Ecommerce Project API",
 		"version": "1.0.7",
-		"description": "This is a sample Ecommerce server.",
-		"termsOfService": "http://swagger.io",
+		"description": "This is a ecommerce server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
+		"termsOfService": "http://swagger.io/terms/",
 		"license": {
 			"name": {
 				"name": "MIT License",
-				"url": "https://opensource.org"
+				"url": "opensource.org"
 			}
 		},
 		"contact": {
@@ -217,24 +222,30 @@
 	},
 	"servers": [
 		{
-			"url": "https://[object Object]/"
+			"url": "http://localhost:3000",
+			"description": "Development server"
 		},
 		{
-			"url": "https://[object Object]/"
+			"url": "https://typegraphql-tutorial.vercel.app//api/v1",
+			"description": "Test Server"
+		},
+		{
+			"url": "https://typegraphql-tutorial.vercel.app",
+			"description": "Production server"
 		}
 	],
 	"tags": [
 		{
 			"name": "Category",
-			"description": "Operations related to categories."
+			"description": "Operations related to product categories, including creation, retrieval, and updates."
+		},
+		{
+			"name": "Product",
+			"description": "Operations related to product management, including creation, retrieval, and updates."
 		},
 		{
 			"name": "Order",
-			"description": "Operations related to orders."
-		},
-		{
-			"name": "Region",
-			"description": "Operations related to regions."
+			"description": "Operations related to order management, including creation, retrieval, and updates."
 		}
 	]
 }

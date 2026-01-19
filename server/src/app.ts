@@ -9,6 +9,15 @@ import { corsOptions } from './configs/cors.config.js';
 
 
 import { bootstrap } from './bootstrap.js';
+import { swaggerOptions } from "./configs/swagger.config.js";
+import path, { dirname} from "node:path";
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+console.log("__filename:", __filename);
+const __dirname = dirname(__filename);
+console.log("__dirname:", __dirname);
+
 
 export const buildApp = (): Application => {
 
@@ -41,19 +50,14 @@ export const buildApp = (): Application => {
     res.json({ message: 'put received successfully' });
   });
 
-  // CDN URLs for Swagger UI (using version 5.x for modern compatibility)
-  const SWAGGER_CDN_BASE = "https://cdnjs.cloudflare.com";
-
   app.use(["/openapi", "/docs", "/swagger"],
     swaggerUI.serve,
-    swaggerUI.setup(swaggerJson, {
-      customCssUrl: `${SWAGGER_CDN_BASE}/swagger-ui.min.css`,
-      customJs: [
-        `${SWAGGER_CDN_BASE}/swagger-ui-bundle.min.js`,
-        `${SWAGGER_CDN_BASE}/swagger-ui-standalone-preset.min.js`
-      ]
-    })
+    swaggerUI.setup(swaggerJson, swaggerOptions)
   );
+
+  app.get("/swagger.json", (_req, res) => {
+    res.sendFile(path.join(__dirname, "swagger.json"));
+  });
 
   return app;
 }
