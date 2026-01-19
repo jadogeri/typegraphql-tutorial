@@ -7,8 +7,6 @@ import * as swaggerUI from "swagger-ui-express";
 import cors from 'cors';
 import { corsOptions } from './configs/cors.config.js';
 
-
-
 import { bootstrap } from './bootstrap.js';
 import { configureIoC } from "./configs/ioc.config.js";
 import { swaggerOptions } from "./configs/swagger.config.js";
@@ -65,7 +63,6 @@ export const buildApp = (): Application => {
     swaggerUI.serve,
     swaggerUI.setup(swaggerJson, swaggerOptions)
   );
-
 
   // app.get("/swagger.json", swaggerMiddleware);
   app.get("/swagger.json", (_req, res) => {
