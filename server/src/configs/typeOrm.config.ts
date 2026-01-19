@@ -15,33 +15,19 @@ import { Order } from "../entities/order.entity.js";
 import { Invoice } from "../entities/invoice.entity.js";
 import { SeederOptions } from "typeorm-extension";
 import { NodeEnvironment } from "../types/node-environment.type.js";
-import { getSanitizedTursoUrl } from "../utils/get-turso-url.util.js";
-import { createRequire } from "node:module"; // Essential for ESM compatibility
+import libsqlDriver from "@libsql/sqlite3";
 
 
 
 import * as dotenv from "dotenv";
 dotenv.config();
 
-const require = createRequire(import.meta.url);
-const libsqlDriver = require("@libsql/sqlite3");
+
 
 const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
 const TURSO_DATABASE_URL = (process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
 console.log("TURSO_AUTH_TOKEN:", TURSO_AUTH_TOKEN);
 console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
-
-// const prodOptions: DataSourceOptions & SeederOptions = {
-//   type:  "sqlite" , // or "mysql", "sqlite", etc.
-//    driver: libsql, // Use the imported module directly
-//   flags: 0x00000040 , // required for TypeORM with libsql
-//   database: process.env.TURSO_DATABASE_URL + "?authToken=" + process.env.TURSO_AUTH_TOKEN || process.env.PROD_DATABASE_URL ,
-//   synchronize: false,
-//   logging: false,
-//   entities: [Region, Category, PaymentMethod, PaymentStatus, OrderStatus, Order, Invoice ], // List your entities here
-//   migrations: ["src/migrations/**/*.ts"],
-//   subscribers: [],  
-// }
 
 
 const buildDatasource = (): DataSource => {
