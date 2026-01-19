@@ -2,12 +2,15 @@ import "reflect-metadata";
 import dotenv from "dotenv";
 import { buildApp } from "./app.js";
 import { bootstrap } from "./bootstrap.js";
+import { configureIoC } from "./configs/ioc.config.js";
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 // Start the server
 
 if(process.env.NODE_ENV !== 'production'){
+  console.log("⚙️  Configuring IoC container for development ")
+  configureIoC();
   console.log("⚙️  Building app in development mode");  
   try{
   bootstrap();
