@@ -21,13 +21,14 @@ import { createRequire } from "node:module"; // Essential for ESM compatibility
 
 
 import * as dotenv from "dotenv";
+import { get } from "node:http";
 dotenv.config();
 
 const require = createRequire(import.meta.url);
 const libsqlDriver = require("@libsql/sqlite3");
 
 const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
-const TURSO_DATABASE_URL = (process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
+const TURSO_DATABASE_URL = getSanitizedTursoUrl(process.env.TURSO_DATABASE_URL) //process.env.TURSO_DATABASE_URL;
 console.log("TURSO_AUTH_TOKEN:", TURSO_AUTH_TOKEN);
 console.log("TURSO_DATABASE_URL:", TURSO_DATABASE_URL);
 
@@ -38,7 +39,7 @@ const buildDatasource = (): DataSource => {
 
   const prodOptions: DataSourceOptions & SeederOptions = { 
     type: "sqlite",    
-    database: `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`,
+    database: databaseUrl,
     driver: libsqlDriver,
     flags: 0x00000040 , 
     synchronize: false, 
