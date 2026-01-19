@@ -37,8 +37,7 @@ const buildDatasource = (): DataSource => {
   console.log("Constructed database URL:", databaseUrl);
 
   const prodOptions: DataSourceOptions & SeederOptions = { 
-    type: "sqlite",
-    
+    type: "sqlite",    
     database: `${TURSO_DATABASE_URL}?authToken=${TURSO_AUTH_TOKEN}`,
     driver: libsqlDriver,
     flags: 0x00000040 , 

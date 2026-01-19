@@ -1,5 +1,3 @@
-import swaggerUI from "swagger-ui-express";
-import * as swaggerJson from "../swagger.json"; 
 
 const SWAGGER_URL = "https://cdnjs.cloudflare.com";
 

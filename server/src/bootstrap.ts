@@ -10,7 +10,6 @@ export const bootstrap = async () : Promise<void> => {
   try {
     // A. Resolve the service and connect
     const databaseService = iocContainer.get<SQLiteService>(SQLiteService);
-    console.log("Resolved SQLiteService:", databaseService);
     await databaseService.connect(); 
 
     const dataSource : DataSource= databaseService.getDataSource();
